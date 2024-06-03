@@ -1,0 +1,9 @@
+cancer,pressure,decreases,cycle entry,0.0,1,4,0
+cancer,oxygen,increases,cycle entry,0.0007,21.5,4,0
+cancer,oxygen,decreases,necrosis,0,3.75,8,0
+cancer,drug,increases,apoptosis,5e-3,0.5,4,0
+cancer,dead,increases,debris secretion,1,0.5,10,1
+macrophage,contact with dead cell,increases,transform to M1 macrophage,0.017,0.5,10,0
+cancer,damage,increases,apoptosis,5e-3,5,4,0
+cancer,contact with effector T cell,decreases,immunogenicity to effector T cell,0.1,0.5,10,0
+effector T cell,therapy,increases,attack cancer,1,0.5,4,0
