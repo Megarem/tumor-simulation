@@ -1,0 +1,94 @@
+Signals: 
+=======
+0 : oxygen
+1 : intracellular oxygen
+2 : oxygen gradient
+3 : pressure
+4 : volume
+5 : contact with leader cell
+6 : contact with follower cell
+7 : contact with live cell
+8 : contact with dead cell
+9 : contact with basement membrane
+10 : damage
+11 : dead
+12 : total attack time
+13 : time
+14 : custom:min_ECM_motility_density
+15 : custom:max_ECM_motility_density
+16 : custom:ideal_ECM_motility_density
+17 : custom:max_speed
+18 : custom:chemotaxis_bias
+19 : custom:ECM_sensitivity
+20 : custom:hypoxic_switch_value
+21 : custom:target_ECM_density
+22 : custom:Base_hysteresis_bias
+23 : custom:previous_anisotropy
+24 : custom:Anisotropy_increase_rate
+25 : custom:Fiber_realignment_rate
+26 : custom:link_anisotropy_and_bias
+27 : custom:ECM_production_rate
+28 : custom:migration_bias_norm
+29 : custom:rules_based_speed_multiplier
+30 : apoptotic
+31 : necrotic
+
+Behaviors: 
+=========
+0 : oxygen secretion
+1 : oxygen secretion target
+2 : oxygen uptake
+3 : oxygen export
+4 : cycle entry
+5 : exit from cycle phase 1
+6 : exit from cycle phase 2
+7 : exit from cycle phase 3
+8 : exit from cycle phase 4
+9 : exit from cycle phase 5
+10 : apoptosis
+11 : necrosis
+12 : migration speed
+13 : migration bias
+14 : migration persistence time
+15 : chemotactic response to oxygen
+16 : cell-cell adhesion
+17 : cell-cell adhesion elastic constant
+18 : adhesive affinity to leader cell
+19 : adhesive affinity to follower cell
+20 : relative maximum adhesion distance
+21 : cell-cell repulsion
+22 : cell-BM adhesion
+23 : cell-BM repulsion
+24 : phagocytose dead cell
+25 : phagocytose leader cell
+26 : phagocytose follower cell
+27 : attack leader cell
+28 : attack follower cell
+29 : fuse to leader cell
+30 : fuse to follower cell
+31 : transform to leader cell
+32 : transform to follower cell
+33 : custom:min_ECM_motility_density
+34 : custom:max_ECM_motility_density
+35 : custom:ideal_ECM_motility_density
+36 : custom:max_speed
+37 : custom:chemotaxis_bias
+38 : custom:ECM_sensitivity
+39 : custom:hypoxic_switch_value
+40 : custom:target_ECM_density
+41 : custom:Base_hysteresis_bias
+42 : custom:previous_anisotropy
+43 : custom:Anisotropy_increase_rate
+44 : custom:Fiber_realignment_rate
+45 : custom:link_anisotropy_and_bias
+46 : custom:ECM_production_rate
+47 : custom:migration_bias_norm
+48 : custom:rules_based_speed_multiplier
+49 : is_movable
+50 : immunogenicity to leader cell
+51 : immunogenicity to follower cell
+52 : cell attachment rate
+53 : cell detachment rate
+54 : maximum number of cell attachments
+55 : damage rate
+

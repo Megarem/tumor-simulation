@@ -505,3 +505,8 @@ myproj:
 	make load PROJ=$(PROJ)
 	make
 	python3 studio/bin/studio.py -e project
+
+clear:
+	make clean
+	make data-cleanup
+	make reset

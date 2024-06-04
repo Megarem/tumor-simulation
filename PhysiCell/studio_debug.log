@@ -1,14 +1,27 @@
+DEBUG:root:studio.py: config file is config/leader_follower_model.xml
+DEBUG:root:studio.py: open_as_cb():  filePath is valid
+DEBUG:root:len(config_file) = 32
+DEBUG:root:done with args.config
 DEBUG:root:exec pgm is project
 DEBUG:root:self.current_dir = /home/aymeric/tumor-simulation/PhysiCell
+DEBUG:root:self.studio_root_dir = /home/aymeric/tumor-simulation/PhysiCell/studio
+DEBUG:root:self.config_dir = /home/aymeric/tumor-simulation/PhysiCell/config
 DEBUG:root:cell_def_tab.py: ------- fill_substrates_comboboxes
-DEBUG:root: --> substrate
+DEBUG:root: --> oxygen
 DEBUG:root:=======================  microenv populate_tree  ======================= 
 DEBUG:root:dc_ic_units =  mmHg
 DEBUG:root:dc_bc_units = mmHg
-DEBUG:root:------- options: <Element 'calculate_gradients' at 0x7f430a49ea20>
-DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x7f430a49eac0>
-DEBUG:root:------- options: <Element 'initial_condition' at 0x7f430a49eb10>
-DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x7f430a49ec00>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7f16e94a79c0>
+DEBUG:root:   -------- oxygen:  dirichlet_xmin = 38
+DEBUG:root:bv = <Element 'boundary_value' at 0x7f16e94a7a60>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7f16e94a7b00>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7f16e94a7ba0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7f16e94a7c40>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7f16e94a7ce0>
+DEBUG:root:------- options: <Element 'calculate_gradients' at 0x7f16e94a7dd0>
+DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x7f16e94a7e70>
+DEBUG:root:------- options: <Element 'initial_condition' at 0x7f16e94a7ec0>
+DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x7f16e94c8040>
 DEBUG:root:
 
 =======================  leaving microenv populate_tree  =====================
@@ -26,55 +39,50 @@ DEBUG:root: new stacked widget: t02 -------------> 8
 DEBUG:root: new stacked widget: duration_flowcyto -------------> 9
 DEBUG:root: new stacked widget: flow cyto sep -------------> 10
 DEBUG:root: new stacked widget: duration_quiescent -------------> 11
-DEBUG:root:studio.py: first_cell_def_name= default
+DEBUG:root:studio.py: first_cell_def_name= leader cell
 DEBUG:root:cell_def_tab.py: ------- fill_substrates_comboboxes
-DEBUG:root: --> substrate
+DEBUG:root: --> oxygen
 DEBUG:root:------ motility_substrate_changed_cb(): idx = 0
 DEBUG:root:       motility_substrate_changed_cb(): self.current_cell_def = None
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
-DEBUG:root:   text (subname) = substrate
+DEBUG:root:   text (subname) = oxygen
 DEBUG:root:=======================  populate_tree_cell_defs(): ======================= 
 DEBUG:root:    cell_def_tab.param_d = {}
 DEBUG:root:
 
 =======================  validate_cell_defs(): ======================= 
-DEBUG:root:Checking default
+DEBUG:root:Checking leader cell
+DEBUG:root:Checking follower cell
 DEBUG:root:=======================  end validate_cell_defs(): =======================
 
 
 DEBUG:root:----- cell_def.tag= cell_definition
 DEBUG:root:
---------new_interaction_params(): cdname_new= default, reset_mapping= False
+--------new_interaction_params(): cdname_new= leader cell, reset_mapping= False
 DEBUG:root:
---------new_intracellular_params(): cdname_new= default
+--------new_intracellular_params(): cdname_new= leader cell
 DEBUG:root:------- new_custom_data_params() -----
 DEBUG:root:
 ===== populate_tree():  cycle
 DEBUG:root: >> cycle_path= .//cell_definition[1]//phenotype//cycle
-DEBUG:root:   cycle code= 6
+DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
+DEBUG:root:<Element 'rate' at 0x7f16e94c84a0>
+DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[1]//phenotype//cycle//phase_durations
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f430a49ee80>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f430a49eed0>
-DEBUG:root:------------ sval for phase duration= 300.0
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f430a49ef20>
-DEBUG:root:------------ sval for phase duration= 480
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f430a49ef70>
-DEBUG:root:------------ sval for phase duration= 240
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f430a49efc0>
-DEBUG:root:------------ sval for phase duration= 60
+DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f430a49f010>
+DEBUG:root:death_uep=<Element 'death' at 0x7f16e94c85e0>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f430a49f100>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f430a49f150>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f16e94c87c0>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7f16e94c8860>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f430a49f650>
-DEBUG:root:<Element 'duration' at 0x7f430a49f6a0>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f16e94c9170>
+DEBUG:root:<Element 'duration' at 0x7f16e94c9210>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f430a49f6f0>
+DEBUG:root:<Element 'duration' at 0x7f16e94c92b0>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[1]//phenotype//volume//
 DEBUG:root:
@@ -82,32 +90,44 @@ DEBUG:root:
 DEBUG:root:mechanics_path=.//cell_definition[1]//phenotype//mechanics//
 DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//mechanics//cell_adhesion_affinities
 DEBUG:root:---- found cell_adhesion_affinities_path:
-DEBUG:root:--> {'default': '1'}
+DEBUG:root:--> {'leader cell': '1.0'}
+DEBUG:root:--> {'leader cell': '1.0', 'follower cell': '1.0'}
 DEBUG:root:
 ===== populate_tree():  motility
 DEBUG:root:motility_path=.//cell_definition[1]//phenotype//motility//
 DEBUG:root:
------------ populate_tree_cell_defs.py: cell_def_name= default,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = substrate
+----------- populate_tree_cell_defs.py: cell_def_name= leader cell,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = oxygen
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//
-DEBUG:root:chemotactic_sensitivity= {'substrate': '0.0'}
-DEBUG:root:---- no motility_advanced_chemotaxis_path found. Setting to default values
+DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
+DEBUG:root:sensitivity_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f16e94cb600>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f16e94cb6a0>
+DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
+DEBUG:root:{'oxygen': '0.0'}
+DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
+DEBUG:root:   text (subname) = oxygen
+DEBUG:root:    motility_advanced_chemotaxis_substrate= oxygen
+DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
+DEBUG:root:----- chemo_sensitivity_changed() = 0.0
+DEBUG:root:----- chemo_sensitivity_changed(): subname = oxygen
+DEBUG:root:     chemotactic_sensitivity (dict)= {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[1]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f430a4c0a40>
-DEBUG:root:0) -- secretion substrate = substrate
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f16e94cb880>
+DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f430a4c0ea0>
-DEBUG:root: live_phagocytosis_rate= {'default': '0'}
-DEBUG:root: attack_rate= {'default': '0'}
-DEBUG:root: fusion_rate= {'default': '0'}
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f16e94d4040>
+DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
 DEBUG:root:------ done parsing cell_interactions:
 DEBUG:root:---- transformation_rates_path = .//cell_definition[1]//phenotype//cell_transformations//transformation_rates
-DEBUG:root: transformation_rate= {'default': '0'}
+DEBUG:root: transformation_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
 DEBUG:root:------ done parsing cell_transformations:
 DEBUG:root:
 ===== populate_tree():  molecular
@@ -116,10 +136,151 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f430a4c1350>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f16e94d4bd0>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
-DEBUG:root:var.attrib.keys() = dict_keys(['units', 'conserved'])
-DEBUG:root:populate: cell_def_name= default --> custom_data: {'sample': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.004', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.004', False], 'Fiber_realignment_rate': ['4.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.004', False], 'Fiber_realignment_rate': ['4.0', False], 'link_anisotropy_and_bias': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.004', False], 'Fiber_realignment_rate': ['4.0', False], 'link_anisotropy_and_bias': ['1.0', False], 'ECM_production_rate': ['0.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.004', False], 'Fiber_realignment_rate': ['4.0', False], 'link_anisotropy_and_bias': ['1.0', False], 'ECM_production_rate': ['0.0', False], 'migration_bias_norm': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['0.05', False], 'ECM_sensitivity': ['0.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.004', False], 'Fiber_realignment_rate': ['4.0', False], 'link_anisotropy_and_bias': ['1.0', False], 'ECM_production_rate': ['0.0', False], 'migration_bias_norm': ['1.0', False], 'rules_based_speed_multiplier': ['1.0', False]}
+DEBUG:root:----- cell_def.tag= cell_definition
+DEBUG:root:
+--------new_interaction_params(): cdname_new= follower cell, reset_mapping= False
+DEBUG:root:
+--------new_intracellular_params(): cdname_new= follower cell
+DEBUG:root:------- new_custom_data_params() -----
+DEBUG:root:
+===== populate_tree():  cycle
+DEBUG:root: >> cycle_path= .//cell_definition[2]//phenotype//cycle
+DEBUG:root:   cycle code= 5
+DEBUG:root: >> phase_transition_path 
+DEBUG:root:<Element 'rate' at 0x7f16e94d5cb0>
+DEBUG:root:--  cycle_live_trate00 0.0
+DEBUG:root: >> phase_durations_path =.//cell_definition[2]//phenotype//cycle//phase_durations
+DEBUG:root: >> pd_uep =None
+DEBUG:root:
+===== populate_tree():  death
+DEBUG:root:death_uep=<Element 'death' at 0x7f16e94d5df0>
+DEBUG:root:-------- parsing apoptosis!
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f16e94d5fd0>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7f16e94d6070>
+DEBUG:root:index= 0
+DEBUG:root:-------- parsing necrosis!
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f16e94d67a0>
+DEBUG:root:<Element 'duration' at 0x7f16e94d6840>
+DEBUG:root:index= 0
+DEBUG:root:<Element 'duration' at 0x7f16e94d68e0>
+DEBUG:root:index= 1
+DEBUG:root:volume_path=.//cell_definition[2]//phenotype//volume//
+DEBUG:root:
+===== populate_tree():  mechanics
+DEBUG:root:mechanics_path=.//cell_definition[2]//phenotype//mechanics//
+DEBUG:root:---- cell_interactions_path= .//cell_definition[2]//phenotype//mechanics//cell_adhesion_affinities
+DEBUG:root:---- found cell_adhesion_affinities_path:
+DEBUG:root:--> {'leader cell': '1.0'}
+DEBUG:root:--> {'leader cell': '1.0', 'follower cell': '1.0'}
+DEBUG:root:
+===== populate_tree():  motility
+DEBUG:root:motility_path=.//cell_definition[2]//phenotype//motility//
+DEBUG:root:
+----------- populate_tree_cell_defs.py: cell_def_name= follower cell,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = oxygen
+DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//
+DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
+DEBUG:root:sensitivity_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f16e94e0810>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f16e94e0860>
+DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
+DEBUG:root:{'oxygen': '0.0'}
+DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
+DEBUG:root:   text (subname) = oxygen
+DEBUG:root:    motility_advanced_chemotaxis_substrate= oxygen
+DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
+DEBUG:root:
+===== populate_tree():  secretion
+DEBUG:root:secretion_path = .//cell_definition[2]//phenotype//secretion//
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f16e94e0a40>
+DEBUG:root:0) -- secretion substrate = oxygen
+DEBUG:root:------ done parsing secretion:
+DEBUG:root:
+===== populate_tree():  cell_interactions
+DEBUG:root:---- cell_interactions_path= .//cell_definition[2]//phenotype//cell_interactions
+DEBUG:root:---- found cell_interactions:
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f16e94e1080>
+DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root:------ done parsing cell_interactions:
+DEBUG:root:---- transformation_rates_path = .//cell_definition[2]//phenotype//cell_transformations//transformation_rates
+DEBUG:root: transformation_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root:------ done parsing cell_transformations:
+DEBUG:root:
+===== populate_tree():  molecular
+DEBUG:root:
+===== populate_tree():  intracellular
+DEBUG:root:------ done parsing intracellular:
+DEBUG:root:
+===== populate_tree():  custom data
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f16e94e1ad0>
+DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.000', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.000', False], 'Fiber_realignment_rate': ['0.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.000', False], 'Fiber_realignment_rate': ['0.0', False], 'link_anisotropy_and_bias': ['0.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.000', False], 'Fiber_realignment_rate': ['0.0', False], 'link_anisotropy_and_bias': ['0.0', False], 'ECM_production_rate': ['0.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.000', False], 'Fiber_realignment_rate': ['0.0', False], 'link_anisotropy_and_bias': ['0.0', False], 'ECM_production_rate': ['0.0', False], 'migration_bias_norm': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False], 'max_ECM_motility_density': ['1.0', False], 'ideal_ECM_motility_density': ['0.5', False], 'max_speed': ['0.5', False], 'chemotaxis_bias': ['1.0', False], 'ECM_sensitivity': ['1.0', False], 'hypoxic_switch_value': ['38', False], 'target_ECM_density': ['0.5', False], 'Base_hysteresis_bias': ['1.0', False], 'previous_anisotropy': ['0', False], 'Anisotropy_increase_rate': ['0.000', False], 'Fiber_realignment_rate': ['0.0', False], 'link_anisotropy_and_bias': ['0.0', False], 'ECM_production_rate': ['0.0', False], 'migration_bias_norm': ['1.0', False], 'rules_based_speed_multiplier': ['1.0', False]}
 DEBUG:root:
   ---- apoptosis_phase_transition_cb: 
 DEBUG:root:apoptosis: ------>> duration
@@ -129,15 +290,17 @@ DEBUG:root:
 DEBUG:root:necrosis: ------>>duration
 DEBUG:root:necrosis_phase_transition_cb: --> duration
 DEBUG:root:
------ update_motility_params():  cdname= default
-DEBUG:root:     setting motility_substrate_dropdown (for cdname= default ) = substrate
-DEBUG:root:     setting motility2_substrate_dropdown (for cdname= default ) = 
-DEBUG:root:    chemotactic_sensitivity= {'substrate': '0.0'}
+----- update_motility_params():  cdname= leader cell
+DEBUG:root:   (simple) chemotaxis motility is enabled:
+DEBUG:root:     setting motility_substrate_dropdown (for cdname= leader cell ) = oxygen
+DEBUG:root:     setting motility2_substrate_dropdown (for cdname= leader cell ) = oxygen
+DEBUG:root:    chemotactic_sensitivity= {'oxygen': '0.0'}
+DEBUG:root:new val = 0.0
 DEBUG:root:----- leave update_motility_params()
 
-DEBUG:root:update_secretion_params(): cdname = default
-DEBUG:root:update_secretion_params(): self.current_secretion_substrate = substrate
-DEBUG:root:{'substrate': {'secretion_rate': '0', 'secretion_target': '1', 'uptake_rate': '0', 'net_export_rate': '0'}}
+DEBUG:root:update_secretion_params(): cdname = leader cell
+DEBUG:root:update_secretion_params(): self.current_secretion_substrate = oxygen
+DEBUG:root:{'oxygen': {'secretion_rate': '0', 'secretion_target': '38', 'uptake_rate': '10', 'net_export_rate': '0'}}
 DEBUG:root:cell_def_tab.py: ------- fill_celltypes_comboboxes
 DEBUG:root:
 
@@ -243,496 +406,237 @@ DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/
 DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf', name='Nimbus Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
 DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Bold.otf', name='C059', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
 DEBUG:matplotlib.font_manager:findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
-DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['default']
-DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['default']
+DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['leader cell', 'follower cell']
+DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['leader cell', 'follower cell']
 DEBUG:root:studio.py: calling vis_tab.substrates_cbox_changed_cb(2)
-DEBUG:root:
-studio.py: open_as_cb():  full_path_model_name =/home/aymeric/tumor-simulation/PhysiCell/config/template.xml
-DEBUG:root:     filePath is valid
-DEBUG:root:     len(full_path_model_name) = 60
-DEBUG:root:studio: show_sample_model(): self.config_file = /home/aymeric/tumor-simulation/PhysiCell/config/template.xml
-DEBUG:root:cell_def_tab.py: ------- fill_substrates_comboboxes
-DEBUG:root: --> oxygen
-DEBUG:root: --> drug
-DEBUG:root: --> debris
-DEBUG:root: --> pro-inflammatory factdor
-DEBUG:root: --> therapy
-DEBUG:root:=======================  microenv populate_tree  ======================= 
-DEBUG:root:dc_ic_units =  mmHg
-DEBUG:root:dc_bc_units = mmHg
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b74fe0>
-DEBUG:root:   -------- oxygen:  dirichlet_xmin = 38
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75080>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75120>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b751c0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75260>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75300>
-DEBUG:root:dc_ic_units =  dimensionless
-DEBUG:root:dc_bc_units = dimensionless
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75670>
-DEBUG:root:   -------- drug:  dirichlet_xmin = None
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75710>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b757b0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75850>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b758f0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75990>
-DEBUG:root:dc_ic_units =  dimensionless
-DEBUG:root:dc_bc_units = dimensionless
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75d00>
-DEBUG:root:   -------- debris:  dirichlet_xmin = None
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75da0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75e40>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75ee0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b75f80>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76020>
-DEBUG:root:dc_ic_units =  dimensionless
-DEBUG:root:dc_bc_units = dimensionless
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b763e0>
-DEBUG:root:   -------- pro-inflammatory factdor:  dirichlet_xmin = None
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76480>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76520>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b765c0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76660>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76700>
-DEBUG:root:dc_ic_units =  dimensionless
-DEBUG:root:dc_bc_units = dimensionless
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76a70>
-DEBUG:root:   -------- therapy:  dirichlet_xmin = 1
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76b10>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76bb0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76c50>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76cf0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4303b76d90>
-DEBUG:root:------- options: <Element 'calculate_gradients' at 0x7f4303b76e80>
-DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x7f4303b76f20>
-DEBUG:root:------- options: <Element 'initial_condition' at 0x7f4303b76f70>
-DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x7f4303b770b0>
-DEBUG:root:
-
-=======================  leaving microenv populate_tree  =====================
-DEBUG:root:cell_def_tab.py: ------- fill_substrates_comboboxes
-DEBUG:root:------ motility_substrate_changed_cb(): idx = -1
-DEBUG:root:       motility_substrate_changed_cb(): self.current_cell_def = None
-DEBUG:root:------ motility2_substrate_changed_cb(): idx = -1
-DEBUG:root:   text (subname) = 
-DEBUG:root:   subname is empty, return!
-DEBUG:root: --> oxygen
-DEBUG:root:------ motility_substrate_changed_cb(): idx = 0
-DEBUG:root:       motility_substrate_changed_cb(): self.current_cell_def = None
-DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
-DEBUG:root:   text (subname) = oxygen
-DEBUG:root: --> drug
-DEBUG:root: --> debris
-DEBUG:root: --> pro-inflammatory factdor
-DEBUG:root: --> therapy
-DEBUG:root:=======================  populate_tree_cell_defs(): ======================= 
-DEBUG:root:    cell_def_tab.param_d = {}
-DEBUG:root:
-
-=======================  validate_cell_defs(): ======================= 
-DEBUG:root:Checking cancer
-DEBUG:root:Checking macrophage
-DEBUG:root:Checking M1 macrophage
-DEBUG:root:Checking effector T cell
-DEBUG:root:=======================  end validate_cell_defs(): =======================
-
-
-DEBUG:root:----- cell_def.tag= cell_definition
-DEBUG:root:
---------new_interaction_params(): cdname_new= cancer, reset_mapping= False
-DEBUG:root:
---------new_intracellular_params(): cdname_new= cancer
-DEBUG:root:------- new_custom_data_params() -----
-DEBUG:root:
-===== populate_tree():  cycle
-DEBUG:root: >> cycle_path= .//cell_definition[1]//phenotype//cycle
-DEBUG:root:   cycle code= 5
-DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4303b77510>
-DEBUG:root:--  cycle_live_trate00 0.0
-DEBUG:root: >> phase_durations_path =.//cell_definition[1]//phenotype//cycle//phase_durations
-DEBUG:root: >> pd_uep =None
-DEBUG:root:
-===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4303b77650>
-DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303b77830>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4303b778d0>
-DEBUG:root:index= 0
-DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303b80220>
-DEBUG:root:<Element 'duration' at 0x7f4303b802c0>
-DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4303b80360>
-DEBUG:root:index= 1
-DEBUG:root:volume_path=.//cell_definition[1]//phenotype//volume//
-DEBUG:root:
-===== populate_tree():  mechanics
-DEBUG:root:mechanics_path=.//cell_definition[1]//phenotype//mechanics//
-DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//mechanics//cell_adhesion_affinities
-DEBUG:root:---- found cell_adhesion_affinities_path:
-DEBUG:root:--> {'cancer': '1'}
-DEBUG:root:--> {'cancer': '1', 'macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1', 'macrophage': '1.0', 'M1 macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1', 'macrophage': '1.0', 'M1 macrophage': '1.0', 'effector T cell': '1.0'}
-DEBUG:root:
-===== populate_tree():  motility
-DEBUG:root:motility_path=.//cell_definition[1]//phenotype//motility//
-DEBUG:root:
------------ populate_tree_cell_defs.py: cell_def_name= cancer,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = oxygen
-DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//
-DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:sensitivity_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4303b829d0>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b82a70>
-DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b82ac0>
-DEBUG:root: chemotactic_sensitivity--> drug = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b82b10>
-DEBUG:root: chemotactic_sensitivity--> debris = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b82bb0>
-DEBUG:root: chemotactic_sensitivity--> pro-inflammatory factdor = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b82c00>
-DEBUG:root: chemotactic_sensitivity--> therapy = 0.0
-DEBUG:root:{'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
-DEBUG:root:   text (subname) = oxygen
-DEBUG:root:    motility_advanced_chemotaxis_substrate= oxygen
-DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:----- chemo_sensitivity_changed() = 0.0
-DEBUG:root:----- chemo_sensitivity_changed(): subname = oxygen
-DEBUG:root:     chemotactic_sensitivity (dict)= {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:
-===== populate_tree():  secretion
-DEBUG:root:secretion_path = .//cell_definition[1]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4303b82de0>
-DEBUG:root:0) -- secretion substrate = oxygen
-DEBUG:root:1) -- secretion substrate = drug
-DEBUG:root:2) -- secretion substrate = debris
-DEBUG:root:3) -- secretion substrate = pro-inflammatory factdor
-DEBUG:root:4) -- secretion substrate = therapy
-DEBUG:root:------ done parsing secretion:
-DEBUG:root:
-===== populate_tree():  cell_interactions
-DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//cell_interactions
-DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4303b8c630>
-DEBUG:root: live_phagocytosis_rate= {'cancer': '0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: attack_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: fusion_rate= {'cancer': '0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_interactions:
-DEBUG:root:---- transformation_rates_path = .//cell_definition[1]//phenotype//cell_transformations//transformation_rates
-DEBUG:root: transformation_rate= {'cancer': '0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_transformations:
-DEBUG:root:
-===== populate_tree():  molecular
-DEBUG:root:
-===== populate_tree():  intracellular
-DEBUG:root:------ done parsing intracellular:
-DEBUG:root:
-===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4303b8d6c0>
-DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
-DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
-DEBUG:root:populate: cell_def_name= cancer --> custom_data: {'sample': ['1.0', False]}
-DEBUG:root:----- cell_def.tag= cell_definition
-DEBUG:root:
---------new_interaction_params(): cdname_new= macrophage, reset_mapping= False
-DEBUG:root:
---------new_intracellular_params(): cdname_new= macrophage
-DEBUG:root:------- new_custom_data_params() -----
-DEBUG:root:
-===== populate_tree():  cycle
-DEBUG:root: >> cycle_path= .//cell_definition[2]//phenotype//cycle
-DEBUG:root:   cycle code= 5
-DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4303b8d9e0>
-DEBUG:root:--  cycle_live_trate00 0.0
-DEBUG:root: >> phase_durations_path =.//cell_definition[2]//phenotype//cycle//phase_durations
-DEBUG:root: >> pd_uep =None
-DEBUG:root:
-===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4303b8db20>
-DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303b8dd00>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4303b8dda0>
-DEBUG:root:index= 0
-DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303b8e4d0>
-DEBUG:root:<Element 'duration' at 0x7f4303b8e570>
-DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4303b8e610>
-DEBUG:root:index= 1
-DEBUG:root:volume_path=.//cell_definition[2]//phenotype//volume//
-DEBUG:root:
-===== populate_tree():  mechanics
-DEBUG:root:mechanics_path=.//cell_definition[2]//phenotype//mechanics//
-DEBUG:root:---- cell_interactions_path= .//cell_definition[2]//phenotype//mechanics//cell_adhesion_affinities
-DEBUG:root:---- found cell_adhesion_affinities_path:
-DEBUG:root:--> {'cancer': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0', 'M1 macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0', 'M1 macrophage': '1.0', 'effector T cell': '1.0'}
-DEBUG:root:
-===== populate_tree():  motility
-DEBUG:root:motility_path=.//cell_definition[2]//phenotype//motility//
-DEBUG:root:
------------ populate_tree_cell_defs.py: cell_def_name= macrophage,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = debris
-DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//
-DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:sensitivity_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4303b987c0>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b98810>
-DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b98860>
-DEBUG:root: chemotactic_sensitivity--> drug = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b988b0>
-DEBUG:root: chemotactic_sensitivity--> debris = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b98950>
-DEBUG:root: chemotactic_sensitivity--> pro-inflammatory factdor = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303b989a0>
-DEBUG:root: chemotactic_sensitivity--> therapy = 0.0
-DEBUG:root:{'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
-DEBUG:root:   text (subname) = oxygen
-DEBUG:root:    motility_advanced_chemotaxis_substrate= oxygen
-DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:
-===== populate_tree():  secretion
-DEBUG:root:secretion_path = .//cell_definition[2]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4303b98b80>
-DEBUG:root:0) -- secretion substrate = oxygen
-DEBUG:root:1) -- secretion substrate = drug
-DEBUG:root:2) -- secretion substrate = debris
-DEBUG:root:3) -- secretion substrate = pro-inflammatory factdor
-DEBUG:root:4) -- secretion substrate = therapy
-DEBUG:root:------ done parsing secretion:
-DEBUG:root:
-===== populate_tree():  cell_interactions
-DEBUG:root:---- cell_interactions_path= .//cell_definition[2]//phenotype//cell_interactions
-DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4303b9a250>
-DEBUG:root: live_phagocytosis_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: attack_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: fusion_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_interactions:
-DEBUG:root:---- transformation_rates_path = .//cell_definition[2]//phenotype//cell_transformations//transformation_rates
-DEBUG:root: transformation_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_transformations:
-DEBUG:root:
-===== populate_tree():  molecular
-DEBUG:root:
-===== populate_tree():  intracellular
-DEBUG:root:------ done parsing intracellular:
-DEBUG:root:
-===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4303b9b1a0>
-DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
-DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
-DEBUG:root:populate: cell_def_name= macrophage --> custom_data: {'sample': ['1.0', False]}
-DEBUG:root:----- cell_def.tag= cell_definition
-DEBUG:root:
---------new_interaction_params(): cdname_new= M1 macrophage, reset_mapping= False
-DEBUG:root:
---------new_intracellular_params(): cdname_new= M1 macrophage
-DEBUG:root:------- new_custom_data_params() -----
-DEBUG:root:
-===== populate_tree():  cycle
-DEBUG:root: >> cycle_path= .//cell_definition[3]//phenotype//cycle
-DEBUG:root:   cycle code= 5
-DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4303b9b4c0>
-DEBUG:root:--  cycle_live_trate00 0.0
-DEBUG:root: >> phase_durations_path =.//cell_definition[3]//phenotype//cycle//phase_durations
-DEBUG:root: >> pd_uep =None
-DEBUG:root:
-===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4303b9b600>
-DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303b9b7e0>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4303b9b880>
-DEBUG:root:index= 0
-DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303b9bfb0>
-DEBUG:root:<Element 'duration' at 0x7f4303ba8090>
-DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4303ba8130>
-DEBUG:root:index= 1
-DEBUG:root:volume_path=.//cell_definition[3]//phenotype//volume//
-DEBUG:root:
-===== populate_tree():  mechanics
-DEBUG:root:mechanics_path=.//cell_definition[3]//phenotype//mechanics//
-DEBUG:root:---- cell_interactions_path= .//cell_definition[3]//phenotype//mechanics//cell_adhesion_affinities
-DEBUG:root:---- found cell_adhesion_affinities_path:
-DEBUG:root:--> {'cancer': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0', 'M1 macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0', 'M1 macrophage': '1.0', 'effector T cell': '1.0'}
-DEBUG:root:
-===== populate_tree():  motility
-DEBUG:root:motility_path=.//cell_definition[3]//phenotype//motility//
-DEBUG:root:
------------ populate_tree_cell_defs.py: cell_def_name= M1 macrophage,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = debris
-DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[3]//phenotype//motility//options//advanced_chemotaxis//
-DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:sensitivity_path= .//cell_definition[3]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4303baa2a0>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303baa2f0>
-DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303baa340>
-DEBUG:root: chemotactic_sensitivity--> drug = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303baa390>
-DEBUG:root: chemotactic_sensitivity--> debris = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303baa430>
-DEBUG:root: chemotactic_sensitivity--> pro-inflammatory factdor = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303baa480>
-DEBUG:root: chemotactic_sensitivity--> therapy = 0.0
-DEBUG:root:{'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
-DEBUG:root:   text (subname) = oxygen
-DEBUG:root:    motility_advanced_chemotaxis_substrate= oxygen
-DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:
-===== populate_tree():  secretion
-DEBUG:root:secretion_path = .//cell_definition[3]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4303baa660>
-DEBUG:root:0) -- secretion substrate = oxygen
-DEBUG:root:1) -- secretion substrate = drug
-DEBUG:root:2) -- secretion substrate = debris
-DEBUG:root:3) -- secretion substrate = pro-inflammatory factdor
-DEBUG:root:4) -- secretion substrate = therapy
-DEBUG:root:------ done parsing secretion:
-DEBUG:root:
-===== populate_tree():  cell_interactions
-DEBUG:root:---- cell_interactions_path= .//cell_definition[3]//phenotype//cell_interactions
-DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4303babd30>
-DEBUG:root: live_phagocytosis_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: attack_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: fusion_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_interactions:
-DEBUG:root:---- transformation_rates_path = .//cell_definition[3]//phenotype//cell_transformations//transformation_rates
-DEBUG:root: transformation_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_transformations:
-DEBUG:root:
-===== populate_tree():  molecular
-DEBUG:root:
-===== populate_tree():  intracellular
-DEBUG:root:------ done parsing intracellular:
-DEBUG:root:
-===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4303bb4cc0>
-DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
-DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
-DEBUG:root:populate: cell_def_name= M1 macrophage --> custom_data: {'sample': ['1.0', False]}
-DEBUG:root:----- cell_def.tag= cell_definition
-DEBUG:root:
---------new_interaction_params(): cdname_new= effector T cell, reset_mapping= False
-DEBUG:root:
---------new_intracellular_params(): cdname_new= effector T cell
-DEBUG:root:------- new_custom_data_params() -----
-DEBUG:root:
-===== populate_tree():  cycle
-DEBUG:root: >> cycle_path= .//cell_definition[4]//phenotype//cycle
-DEBUG:root:   cycle code= 5
-DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4303bb4fe0>
-DEBUG:root:--  cycle_live_trate00 0.0
-DEBUG:root: >> phase_durations_path =.//cell_definition[4]//phenotype//cycle//phase_durations
-DEBUG:root: >> pd_uep =None
-DEBUG:root:
-===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4303bb5120>
-DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303bb5300>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4303bb53a0>
-DEBUG:root:index= 0
-DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4303bb5ad0>
-DEBUG:root:<Element 'duration' at 0x7f4303bb5b70>
-DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4303bb5c10>
-DEBUG:root:index= 1
-DEBUG:root:volume_path=.//cell_definition[4]//phenotype//volume//
-DEBUG:root:
-===== populate_tree():  mechanics
-DEBUG:root:mechanics_path=.//cell_definition[4]//phenotype//mechanics//
-DEBUG:root:---- cell_interactions_path= .//cell_definition[4]//phenotype//mechanics//cell_adhesion_affinities
-DEBUG:root:---- found cell_adhesion_affinities_path:
-DEBUG:root:--> {'cancer': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0', 'M1 macrophage': '1.0'}
-DEBUG:root:--> {'cancer': '1.0', 'macrophage': '1.0', 'M1 macrophage': '1.0', 'effector T cell': '1.0'}
-DEBUG:root:
-===== populate_tree():  motility
-DEBUG:root:motility_path=.//cell_definition[4]//phenotype//motility//
-DEBUG:root:
------------ populate_tree_cell_defs.py: cell_def_name= effector T cell,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = pro-inflammatory factdor
-DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[4]//phenotype//motility//options//advanced_chemotaxis//
-DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:sensitivity_path= .//cell_definition[4]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4303bb7dd0>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303bb7e20>
-DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303bb7e70>
-DEBUG:root: chemotactic_sensitivity--> drug = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303bb7ec0>
-DEBUG:root: chemotactic_sensitivity--> debris = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303bb7f60>
-DEBUG:root: chemotactic_sensitivity--> pro-inflammatory factdor = 0.0
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4303bb7fb0>
-DEBUG:root: chemotactic_sensitivity--> therapy = 0.0
-DEBUG:root:{'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
-DEBUG:root:   text (subname) = oxygen
-DEBUG:root:    motility_advanced_chemotaxis_substrate= oxygen
-DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:
-===== populate_tree():  secretion
-DEBUG:root:secretion_path = .//cell_definition[4]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4303bc41d0>
-DEBUG:root:0) -- secretion substrate = oxygen
-DEBUG:root:1) -- secretion substrate = drug
-DEBUG:root:2) -- secretion substrate = debris
-DEBUG:root:3) -- secretion substrate = pro-inflammatory factdor
-DEBUG:root:4) -- secretion substrate = therapy
-DEBUG:root:------ done parsing secretion:
-DEBUG:root:
-===== populate_tree():  cell_interactions
-DEBUG:root:---- cell_interactions_path= .//cell_definition[4]//phenotype//cell_interactions
-DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4303bc58a0>
-DEBUG:root: live_phagocytosis_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: attack_rate= {'cancer': '0.1', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root: fusion_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_interactions:
-DEBUG:root:---- transformation_rates_path = .//cell_definition[4]//phenotype//cell_transformations//transformation_rates
-DEBUG:root: transformation_rate= {'cancer': '0.0', 'macrophage': '0.0', 'M1 macrophage': '0.0', 'effector T cell': '0.0'}
-DEBUG:root:------ done parsing cell_transformations:
-DEBUG:root:
-===== populate_tree():  molecular
-DEBUG:root:
-===== populate_tree():  intracellular
-DEBUG:root:------ done parsing intracellular:
-DEBUG:root:
-===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4303bc67f0>
-DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
-DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
-DEBUG:root:populate: cell_def_name= effector T cell --> custom_data: {'sample': ['1.0', False]}
-DEBUG:root:
------ update_motility_params():  cdname= cancer
-DEBUG:root:     setting motility_substrate_dropdown (for cdname= cancer ) = oxygen
-DEBUG:root:     setting motility2_substrate_dropdown (for cdname= cancer ) = oxygen
-DEBUG:root:    chemotactic_sensitivity= {'oxygen': '0.0', 'drug': '0.0', 'debris': '0.0', 'pro-inflammatory factdor': '0.0', 'therapy': '0.0'}
-DEBUG:root:new val = 0.0
-DEBUG:root:----- leave update_motility_params()
-
-DEBUG:root:update_secretion_params(): cdname = cancer
-DEBUG:root:update_secretion_params(): self.current_secretion_substrate = oxygen
-DEBUG:root:{'oxygen': {'secretion_rate': '0', 'secretion_target': '1', 'uptake_rate': '10', 'net_export_rate': '0'}, 'drug': {'secretion_rate': '0.0', 'secretion_target': '0.0', 'uptake_rate': '1', 'net_export_rate': '0.0'}, 'debris': {'secretion_rate': '0.0', 'secretion_target': '1', 'uptake_rate': '0.0', 'net_export_rate': '0.0'}, 'pro-inflammatory factdor': {'secretion_rate': '0.0', 'secretion_target': '0.0', 'uptake_rate': '0.0', 'net_export_rate': '0.0'}, 'therapy': {'secretion_rate': '0.0', 'secretion_target': '0.0', 'uptake_rate': '0.0', 'net_export_rate': '0.0'}}
-DEBUG:root:cell_def_tab.py: ------- fill_celltypes_comboboxes
-DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['cancer', 'macrophage', 'M1 macrophage', 'effector T cell']
+DEBUG:matplotlib.font_manager:findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=7.0.
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf', name='STIXGeneral', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf', name='STIXGeneral', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf', name='cmss10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf', name='cmr10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf', name='DejaVu Sans Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf', name='STIXSizeFiveSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf', name='STIXGeneral', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf', name='cmex10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf', name='DejaVu Serif Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf', name='STIXGeneral', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf', name='cmmi10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf', name='cmsy10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf', name='cmb10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-RI.ttf', name='Ubuntu Mono', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-BdIta.otf', name='C059', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Italic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-LightItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-Bold.otf', name='P052', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-DemiItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-DemiOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-BookOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-Regular.otf', name='Nimbus Roman', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-Demi.otf', name='URW Gothic', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/Z003-MediumItalic.otf', name='Z003', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-BI.ttf', name='Ubuntu Mono', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-BoldOblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=700, stretch='condensed', size='scalable')) = 11.535
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-BoldItalic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf', name='Ubuntu', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf', name='Ubuntu', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/D050000L.otf', name='D050000L', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Italic.otf', name='C059', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-L.ttf', name='Ubuntu', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Regular.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf', name='Droid Sans Fallback', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-Bold.otf', name='Nimbus Roman', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-B.ttf', name='Ubuntu Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-LI.ttf', name='Ubuntu', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-BI.ttf', name='Ubuntu', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-BoldItalic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-Light.otf', name='URW Bookman', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/StandardSymbolsPS.otf', name='Standard Symbols PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Oblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=400, stretch='condensed', size='scalable')) = 11.25
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-C.ttf', name='Ubuntu Condensed', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Italic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-R.ttf', name='Ubuntu Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf', name='Noto Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf', name='Nimbus Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-Th.ttf', name='Ubuntu', style='normal', variant='normal', weight=250, stretch='normal', size='scalable')) = 10.1925
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-BoldItalic.otf', name='P052', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf', name='Noto Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-Demi.otf', name='URW Bookman', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Roman.otf', name='C059', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-Roman.otf', name='P052', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-MI.ttf', name='Ubuntu', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Regular.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-RI.ttf', name='Ubuntu', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-BoldItalic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-M.ttf', name='Ubuntu', style='normal', variant='normal', weight=500, stretch='normal', size='scalable')) = 10.145
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-Book.otf', name='URW Gothic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf', name='Noto Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-Italic.otf', name='P052', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Bold.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-Italic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Bold.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf', name='Nimbus Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Bold.otf', name='C059', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+DEBUG:matplotlib.font_manager:findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=7.0 to DejaVu Sans ('/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+DEBUG:root:===========  run_model_cb():  ============
+DEBUG:root:run_tab.py:  doing: mkdir leader_follower
+DEBUG:root:----------- microenv_tab.py: fill_xml(): ----------
+DEBUG:root:microenv_tab.py: fill_xml(): num subtrates = 1
+DEBUG:root:substrates_in_tree =['oxygen']
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = oxygen
+DEBUG:root:matched! oxygen
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = gradients
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = track_in_agents
 DEBUG:root:
 
-------------  user_params_tab: fill_gui --------------
+----------- cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:num cell defs = 2
+DEBUG:root:cdefs_in_tree =['leader cell', 'follower cell']
+DEBUG:root:
+--- key in param_d.keys() = leader cell
+DEBUG:root:matched! leader cell
+DEBUG:root:--- cell_adhesion_affinity= {'leader cell': '1.0', 'follower cell': '1.0'}
+DEBUG:root:leader cell  --> 1.0
+DEBUG:root:follower cell  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): oxygen = oxygen 
+
+
+DEBUG:root:fill_xml_motility(): {'oxygen': '0.0'}
+DEBUG:root:oxygen  --> 0.0
+DEBUG:root:self.substrate_list = ['oxygen']
+DEBUG:root:substrate = oxygen
+DEBUG:root:------------------- fill_xml_interactions():  cdef= leader cell
+DEBUG:root:--- live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', '': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= leader cell
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= follower cell
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= 
+DEBUG:root:--- attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', '': '0.0'}
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:--- fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', '': '0.0'}
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for leader cell
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for leader cell
+DEBUG:root:
+--- key in param_d.keys() = follower cell
+DEBUG:root:matched! follower cell
+DEBUG:root:--- cell_adhesion_affinity= {'leader cell': '1.0', 'follower cell': '1.0'}
+DEBUG:root:leader cell  --> 1.0
+DEBUG:root:follower cell  --> 1.0
+DEBUG:root:
+
+ ====================> fill_xml_motility(): oxygen = oxygen 
+
+
+DEBUG:root:fill_xml_motility(): {'oxygen': '0.0'}
+DEBUG:root:oxygen  --> 0.0
+DEBUG:root:self.substrate_list = ['oxygen']
+DEBUG:root:substrate = oxygen
+DEBUG:root:------------------- fill_xml_interactions():  cdef= follower cell
+DEBUG:root:--- live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root:  key in live_phagocytosis_rate= leader cell
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:  key in live_phagocytosis_rate= follower cell
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:--- attack_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:--- fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0'}
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:leader cell  --> 0.0
+DEBUG:root:follower cell  --> 0.0
+DEBUG:root:------------------- fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for follower cell
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for follower cell
+DEBUG:root:----------- end cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:
+--------- user_params_tab.py:  fill_xml(): self.count = 100
+DEBUG:root:--------- found //user_parameters
+DEBUG:root:initial_anisotropy
+DEBUG:root:initial_ECM_density
+DEBUG:root:cell_setup
+DEBUG:root:tumor_radius
+DEBUG:root:initial_leader_cell_fraction
+DEBUG:root:oxygen_uptake
+DEBUG:root:default_cell_speed
+DEBUG:root:default_persistence_time
+DEBUG:root:leader_adhesion
+DEBUG:root:leader_repulsion
+DEBUG:root:oxygen_migration_bias_for_leaders
+DEBUG:root:anisotropy_increase_rate
+DEBUG:root:fiber_realignment_rate
+DEBUG:root:default_ECM_density_target
+DEBUG:root:follower_adhesion
+DEBUG:root:follower_repulsion
+DEBUG:root:default_chemotaxis_bias
+DEBUG:root:default_ECM_sensitivity
+DEBUG:root:rho_L
+DEBUG:root:rho_H
+DEBUG:root:rho_I
+DEBUG:root:default_hysteresis_bias
+DEBUG:root:leader_motility_mode
+DEBUG:root:follower_motility_mode
+DEBUG:root:chemotactic_substrate_decay_rate
+DEBUG:root:chemical_field_setup
+DEBUG:root:angle_of_chemical_field_gradient
+DEBUG:root:ECM_orientation_setup
+DEBUG:root:ECM_dx
+DEBUG:root:ECM_dy
+DEBUG:root:ECM_dz
+DEBUG:root:cell_motility_ECM_interaction_model_selector
+DEBUG:root:discrete_ECM_remodeling
+DEBUG:root:link_anisotropy_and_bias
+DEBUG:root:ecm_update_model
+DEBUG:root:normalize_ECM_influenced_motility_vector
+DEBUG:root:duration_of_uE_conditioning
+DEBUG:root:freeze_uE_profile
+DEBUG:root:unit_test_setup
+DEBUG:root:march_unit_test_setup
+DEBUG:root:visual_guideline_pattern
+DEBUG:root:enable_ecm_outputs
+DEBUG:root:found 42

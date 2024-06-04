@@ -55,6 +55,7 @@ pugixml_OBJECTS := pugixml.o
 
 PhysiCell_OBJECTS := $(BioFVM_OBJECTS)  $(pugixml_OBJECTS) $(PhysiCell_core_OBJECTS) $(PhysiCell_module_OBJECTS)
 ALL_OBJECTS := $(PhysiCell_OBJECTS) $(PhysiCell_custom_module_OBJECTS)
+LEADER_FOLLOWER_OBJECTS := $(PhysiCell_OBJECTS) $(PhysiCell_custom_module_OBJECTS)
 
 EXAMPLES := ./examples/PhysiCell_test_mechanics_1.cpp ./examples/PhysiCell_test_mechanics_2.cpp \
  ./examples/PhysiCell_test_DCIS.cpp ./examples/PhysiCell_test_HDS.cpp \
@@ -354,7 +355,14 @@ PhysiCell_geometry.o: ./modules/PhysiCell_geometry.cpp
 	$(COMPILE_COMMAND) -c ./modules/PhysiCell_geometry.cpp 
 
 # user-defined PhysiCell modules
+extracellular_matrix.o: ./custom_modules/extracellular_matrix.cpp 
+	$(COMPILE_COMMAND) -c ./custom_modules/extracellular_matrix.cpp
 
+cell_ECM_interactions.o: ./custom_modules/cell_ECM_interactions.cpp 
+	$(COMPILE_COMMAND) -c ./custom_modules/cell_ECM_interactions.cpp
+
+AMIGOS-invasion_uncoupled.o: ./custom_modules/AMIGOS-invasion_uncoupled.cpp 
+	$(COMPILE_COMMAND) -c ./custom_modules/AMIGOS-invasion_uncoupled.cpp
 # cleanup
 
 reset:
@@ -504,4 +512,4 @@ myproj:
 	make reset
 	make load PROJ=$(PROJ)
 	make
-	python3 studio/bin/studio.py -e project
+	python3 studio/bin/studio_ecm.py -e project -c config/leader_follower_model.xml
