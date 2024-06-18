@@ -296,7 +296,7 @@ ecm:
 	make reset
 	make load PROJ=ecm
 	make
-	python3 studio/bin/studio_ecm.py -e $(PROGRAM_NAME) -c config/leader_follower_model.xml
+	python3 studio/bin/studio_ecm.py -e $(PROGRAM_NAME) -c config/PhysiCell_settings.xml
 
 myproj:
 	find config -mindepth 1 ! -name 'PhysiCell_settings-backup.xml' -exec rm -f {} +

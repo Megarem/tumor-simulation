@@ -36,7 +36,7 @@
     </parallel>
 
     <save>
-        <folder>leader_follower</folder>
+        <folder>output</folder>
         <full_data>
             <interval units="min">6</interval>
             <enable>true</enable>
