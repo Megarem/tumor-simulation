@@ -590,6 +590,9 @@ PhysiCell Studio is provided "AS IS" without warranty of any kind. &nbsp; In no 
             # file_menu.addAction("Save mymodel.xml", self.save_cb, QtGui.QKeySequence('Ctrl+s'))
             file_menu.addAction("Save as", self.save_as_cb)
             file_menu.addAction("Save", self.save_cb, QtGui.QKeySequence('Ctrl+s'))
+            file_menu.addSeparator()
+            file_menu.addAction("Save user project", self.save_user_proj_cb)
+            file_menu.addAction("Load user project", self.load_user_proj_cb)
             #------
             export_menu = file_menu.addMenu("Export")
 
@@ -896,6 +899,160 @@ PhysiCell Studio is provided "AS IS" without warranty of any kind. &nbsp; In no 
     
         except CellDefException as e:
             self.show_error_message(str(e) + " : save_cb(): Error: Please finish the definition before saving.")
+    #---------------------------------
+    def save_user_proj_cb(self):
+        if not os.path.isfile(os.path.join(self.current_dir, "main.cpp")):
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setText("Warning: You do not seem to be in a PhysiCell root directory. Continue?")
+            msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            returnValue = msgBox.exec()
+            if returnValue == QMessageBox.Cancel:
+                return
+
+        dialog = QFileDialog(self)
+        dialog.setFileMode(QFileDialog.Directory)
+        folder_path = dialog.getExistingDirectory(None, "Select project folder","user_projects",QFileDialog.ShowDirsOnly)
+        print("save_user_proj_cb():  folder_path=",folder_path)
+        # print("save_user_proj_cb():  len(folder_path)=",len(folder_path))
+        if len(folder_path) == 0:   # User hit Cancel on dialog
+            print("Canceled - will not attempt to save project.")
+            return
+        # e.g., /Users/heiland/dev/PhysiCell_v1.12.0/user_projects/rwh3
+
+        for f in ["main.cpp", "Makefile", "VERSION.txt"]:
+            try:
+                shutil.copy(f, folder_path)
+            except:
+                print(f"--- Warning: cannot save {f}")
+        #---------
+        subdir = Path(folder_path, "config")
+        try:
+            os.makedirs(subdir)
+        except:
+            print(f"--- Warning: {subdir} already exists.")
+
+        try:
+            for f in glob.glob("config/*"):
+                shutil.copy(f, subdir)
+        except:
+            print(f"--- Warning: cannot copy files in config/*")
+
+        # Also copy the config file specified in the Run tab (it might not be in /config !)
+        try:
+            shutil.copy(self.current_xml_file, subdir)
+        except:
+            print(f"--- Warning: cannot copy {self.current_xml_file} to /config")
+
+        #---------
+        subdir = Path(folder_path, "custom_modules")
+        try:
+            os.makedirs(subdir)
+        except:
+            print(f"--- Warning: {subdir} already exists.")
+
+        try:
+            for f in glob.glob("custom_modules/*"):
+                shutil.copy(f, subdir)
+        except:
+            print(f"--- Warning: cannot copy custom_modules/*")
+
+
+    #---------------------------------
+    def load_user_proj_studio_template(self, proj_path):
+        try:
+            # dialog = QFileDialog(self)
+            # dialog.setFileMode(QFileDialog.Directory)
+            # folder_path = dialog.getExistingDirectory(None, "Select project folder","user_projects",QFileDialog.ShowDirsOnly)
+            # print("load_user_proj_cb():  folder_path=",folder_path)
+            # if len(folder_path) == 0:   # User hit Cancel on dialog
+            #     print("Canceled - will not attempt to load project.")
+            #     return
+
+        # load_user_proj_cb():  folder_path= /Users/heiland/PhysiCell/user_projects/mine1
+
+            for f in ["main.cpp", "Makefile"]:
+                try:
+                    f2 = os.path.join(proj_path, f)
+                    shutil.copy(f2, '.')
+                    print(f"copy {f2} to root")
+                except:
+                    print(f"--- Warning: cannot copy {f2}")
+
+            old = os.path.join("config", "PhysiCell_settings.xml")
+            bkup = os.path.join("config", "PhysiCell_settings-backup.xml")
+            try:
+                shutil.copy(old, bkup)
+            except:
+                print(f"--- Warning: cannot copy {old} to {bkup}")
+
+            for d in ["config", "custom_modules"]:
+                d1 = os.path.join(proj_path, d)
+                print(f"d1 = {d1}")
+                for f in glob.glob(str(d1) + "/*"):
+                    print(f"copying {f} to {d}")
+                    shutil.copy(f, d)
+
+            # msgBox = QMessageBox()
+            # msgBox.setIcon(QMessageBox.Information)
+            # msgBox.setText("Loaded (copied) Studio template files to:  main.cpp, Makefile, config/*, and custom_modules/*.\n\nUse File->Open to load the .xml configuration file.")
+            # msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            # returnValue = msgBox.exec()
+
+        except:
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setText("load_user_proj_cb(): Possible failure. See terminal output.")
+            msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            returnValue = msgBox.exec()
+
+    #---------------------------------
+    def load_user_proj_cb(self):
+        if not os.path.isfile(os.path.join(self.current_dir, "main.cpp")):
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setText("Warning: You do not seem to be in a PhysiCell root directory. Continue?")
+            msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            returnValue = msgBox.exec()
+            if returnValue == QMessageBox.Cancel:
+                return
+
+        try:
+            dialog = QFileDialog(self)
+            dialog.setFileMode(QFileDialog.Directory)
+            folder_path = dialog.getExistingDirectory(None, "Select project folder","user_projects",QFileDialog.ShowDirsOnly)
+            print("load_user_proj_cb():  folder_path=",folder_path)
+            if len(folder_path) == 0:   # User hit Cancel on dialog
+                print("Canceled - will not attempt to load project.")
+                return
+
+            for f in ["main.cpp", "Makefile"]:
+                try:
+                    f2 = os.path.join(folder_path, f)
+                    shutil.copy(f2, '.')
+                    print(f"copy {f2} to root")
+                except:
+                    print(f"--- Warning: cannot copy {f2}")
+
+            for d in ["config", "custom_modules"]:
+                d1 = os.path.join(folder_path, d)
+                print(f"d1 = {d1}")
+                for f in glob.glob(str(d1) + "/*"):
+                    print(f"copying {f} to {d}")
+                    shutil.copy(f, d)
+
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setText("Loaded (copied) files to:  main.cpp, Makefile, config/*, and custom_modules/*.\n\nUse File->Open to load the .xml configuration file.")
+            msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            returnValue = msgBox.exec()
+
+        except:
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setText("load_user_proj_cb(): Possible failure. See terminal output.")
+            msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            returnValue = msgBox.exec()
 
 
     def validate_cb(self):  # not used currently

@@ -3,4 +3,19 @@ Cell Hypothesis Rules
 In leader cell cells:
 
 In follower cell cells:
+pressure decreases cycle entry
+oxygen increases cycle entry
+
+In cancer cells:
+pressure decreases cycle entry
+oxygen increases cycle entry
+oxygen decreases necrosis
+oxygen decreases migration speed
+oxygen increases cell-cell adhesion
+
+In microglia cells:
+
+In astrocyte cells:
+pressure decreases cycle entry
+oxygen increases cycle entry
 

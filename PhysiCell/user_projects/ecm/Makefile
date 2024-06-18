@@ -289,6 +289,15 @@ reset:
 	rm -f ./config/*.csv
 	
 
+ecm:
+	find config -mindepth 1 ! -name 'PhysiCell_settings-backup.xml' -exec rm -f {} +
+	make clean
+	make data-cleanup
+	make reset
+	make load PROJ=ecm
+	make
+	python3 studio/bin/studio_ecm.py -e $(PROGRAM_NAME) -c config/leader_follower_model.xml
+
 myproj:
 	find config -mindepth 1 ! -name 'PhysiCell_settings-backup.xml' -exec rm -f {} +
 	make clean
@@ -296,4 +305,5 @@ myproj:
 	make reset
 	make load PROJ=$(PROJ)
 	make
-	python3 studio/bin/studio_ecm.py -e $(PROGRAM_NAME) -c config/leader_follower_model.xml
+	python3 studio/bin/studio.py -e project
+

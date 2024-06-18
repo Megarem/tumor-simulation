@@ -7,31 +7,34 @@ Signals:
 4 : volume
 5 : contact with leader cell
 6 : contact with follower cell
-7 : contact with live cell
-8 : contact with dead cell
-9 : contact with basement membrane
-10 : damage
-11 : dead
-12 : total attack time
-13 : time
-14 : custom:min_ECM_motility_density
-15 : custom:max_ECM_motility_density
-16 : custom:ideal_ECM_motility_density
-17 : custom:max_speed
-18 : custom:chemotaxis_bias
-19 : custom:ECM_sensitivity
-20 : custom:hypoxic_switch_value
-21 : custom:target_ECM_density
-22 : custom:Base_hysteresis_bias
-23 : custom:previous_anisotropy
-24 : custom:Anisotropy_increase_rate
-25 : custom:Fiber_realignment_rate
-26 : custom:link_anisotropy_and_bias
-27 : custom:ECM_production_rate
-28 : custom:migration_bias_norm
-29 : custom:rules_based_speed_multiplier
-30 : apoptotic
-31 : necrotic
+7 : contact with cancer
+8 : contact with microglia
+9 : contact with astrocyte
+10 : contact with live cell
+11 : contact with dead cell
+12 : contact with basement membrane
+13 : damage
+14 : dead
+15 : total attack time
+16 : time
+17 : custom:min_ECM_motility_density
+18 : custom:max_ECM_motility_density
+19 : custom:ideal_ECM_motility_density
+20 : custom:max_speed
+21 : custom:chemotaxis_bias
+22 : custom:ECM_sensitivity
+23 : custom:hypoxic_switch_value
+24 : custom:target_ECM_density
+25 : custom:Base_hysteresis_bias
+26 : custom:previous_anisotropy
+27 : custom:Anisotropy_increase_rate
+28 : custom:Fiber_realignment_rate
+29 : custom:link_anisotropy_and_bias
+30 : custom:ECM_production_rate
+31 : custom:migration_bias_norm
+32 : custom:rules_based_speed_multiplier
+33 : apoptotic
+34 : necrotic
 
 Behaviors: 
 =========
@@ -55,40 +58,58 @@ Behaviors:
 17 : cell-cell adhesion elastic constant
 18 : adhesive affinity to leader cell
 19 : adhesive affinity to follower cell
-20 : relative maximum adhesion distance
-21 : cell-cell repulsion
-22 : cell-BM adhesion
-23 : cell-BM repulsion
-24 : phagocytose dead cell
-25 : phagocytose leader cell
-26 : phagocytose follower cell
-27 : attack leader cell
-28 : attack follower cell
-29 : fuse to leader cell
-30 : fuse to follower cell
-31 : transform to leader cell
-32 : transform to follower cell
-33 : custom:min_ECM_motility_density
-34 : custom:max_ECM_motility_density
-35 : custom:ideal_ECM_motility_density
-36 : custom:max_speed
-37 : custom:chemotaxis_bias
-38 : custom:ECM_sensitivity
-39 : custom:hypoxic_switch_value
-40 : custom:target_ECM_density
-41 : custom:Base_hysteresis_bias
-42 : custom:previous_anisotropy
-43 : custom:Anisotropy_increase_rate
-44 : custom:Fiber_realignment_rate
-45 : custom:link_anisotropy_and_bias
-46 : custom:ECM_production_rate
-47 : custom:migration_bias_norm
-48 : custom:rules_based_speed_multiplier
-49 : is_movable
-50 : immunogenicity to leader cell
-51 : immunogenicity to follower cell
-52 : cell attachment rate
-53 : cell detachment rate
-54 : maximum number of cell attachments
-55 : damage rate
+20 : adhesive affinity to cancer
+21 : adhesive affinity to microglia
+22 : adhesive affinity to astrocyte
+23 : relative maximum adhesion distance
+24 : cell-cell repulsion
+25 : cell-BM adhesion
+26 : cell-BM repulsion
+27 : phagocytose dead cell
+28 : phagocytose leader cell
+29 : phagocytose follower cell
+30 : phagocytose cancer
+31 : phagocytose microglia
+32 : phagocytose astrocyte
+33 : attack leader cell
+34 : attack follower cell
+35 : attack cancer
+36 : attack microglia
+37 : attack astrocyte
+38 : fuse to leader cell
+39 : fuse to follower cell
+40 : fuse to cancer
+41 : fuse to microglia
+42 : fuse to astrocyte
+43 : transform to leader cell
+44 : transform to follower cell
+45 : transform to cancer
+46 : transform to microglia
+47 : transform to astrocyte
+48 : custom:min_ECM_motility_density
+49 : custom:max_ECM_motility_density
+50 : custom:ideal_ECM_motility_density
+51 : custom:max_speed
+52 : custom:chemotaxis_bias
+53 : custom:ECM_sensitivity
+54 : custom:hypoxic_switch_value
+55 : custom:target_ECM_density
+56 : custom:Base_hysteresis_bias
+57 : custom:previous_anisotropy
+58 : custom:Anisotropy_increase_rate
+59 : custom:Fiber_realignment_rate
+60 : custom:link_anisotropy_and_bias
+61 : custom:ECM_production_rate
+62 : custom:migration_bias_norm
+63 : custom:rules_based_speed_multiplier
+64 : is_movable
+65 : immunogenicity to leader cell
+66 : immunogenicity to follower cell
+67 : immunogenicity to cancer
+68 : immunogenicity to microglia
+69 : immunogenicity to astrocyte
+70 : cell attachment rate
+71 : cell detachment rate
+72 : maximum number of cell attachments
+73 : damage rate
 

@@ -1,0 +1,5 @@
+cancer,pressure,decreases,cycle entry,0.0,1,4,0
+cancer,oxygen,increases,cycle entry,0.002,21.5,4,0
+cancer,oxygen,decreases,necrosis,0,3.75,8,0
+cancer,oxygen,decreases,migration speed,0,7.5,4,0
+cancer,oxygen,increases,cell-cell adhesion,0.4,7.5,4,0

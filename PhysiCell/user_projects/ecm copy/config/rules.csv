@@ -1,0 +1,3 @@
+follower cell,pressure,decreases,cycle entry,0.0,1,4,0
+follower cell,oxygen,increases,cycle entry,0.0007,21.5,4,0
+follower cell,oxygen,decreases,necrosis,0,3.75,8,0

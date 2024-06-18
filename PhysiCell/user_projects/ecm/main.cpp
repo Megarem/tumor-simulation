@@ -71,7 +71,7 @@ void dump_cell_info()
 
 int main( int argc, char* argv[] )
 {
-	std::cout<<"test"<<std::endl;
+
 	// load and parse settings file(s)
  
 	bool XML_status = false; 
