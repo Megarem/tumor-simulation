@@ -10,10 +10,10 @@
     </cell_rules>
 
     <domain>
-        <x_min>-800</x_min>
-        <x_max>800</x_max>
-        <y_min>-800</y_min>
-        <y_max>800</y_max>
+        <x_min>-8170</x_min>
+        <x_max>8170</x_max>
+        <y_min>-8170</y_min>
+        <y_max>8170</y_max>
         <z_min>-10</z_min>
         <z_max>10</z_max>
         <dx>20</dx>
@@ -32,17 +32,17 @@
     </overall>
 
     <parallel>
-        <omp_num_threads>8</omp_num_threads>
+        <omp_num_threads>12</omp_num_threads>
     </parallel>
 
     <save>
         <folder>output</folder>
         <full_data>
-            <interval units="min">480</interval>
+            <interval units="min">10</interval>
             <enable>true</enable>
         </full_data>
         <SVG>
-            <interval units="min">480</interval>
+            <interval units="min">10</interval>
             <enable>true</enable>
             <plot_substrate enabled="false" limits="false">
                 <substrate>oxygen</substrate>
