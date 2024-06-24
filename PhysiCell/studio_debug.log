@@ -11,17 +11,17 @@ DEBUG:root: --> oxygen
 DEBUG:root:=======================  microenv populate_tree  ======================= 
 DEBUG:root:dc_ic_units =  mmHg
 DEBUG:root:dc_bc_units = mmHg
-DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8900>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fd1a794ca90>
 DEBUG:root:   -------- oxygen:  dirichlet_xmin = 38
-DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c89a0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8a40>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8ae0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8b80>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8c20>
-DEBUG:root:------- options: <Element 'calculate_gradients' at 0x7fc7df6c8d10>
-DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x7fc7df6c8db0>
-DEBUG:root:------- options: <Element 'initial_condition' at 0x7fc7df6c8e00>
-DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x7fc7df6c8f40>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fd1a794cb30>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fd1a794cbd0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fd1a794cc70>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fd1a794cd10>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fd1a794cdb0>
+DEBUG:root:------- options: <Element 'calculate_gradients' at 0x7fd1a794cea0>
+DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x7fd1a794cf40>
+DEBUG:root:------- options: <Element 'initial_condition' at 0x7fd1a794cf90>
+DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x7fd1a794d0d0>
 DEBUG:root:
 
 =======================  leaving microenv populate_tree  =====================
@@ -70,22 +70,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[1]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7fc7df6c93a0>
+DEBUG:root:<Element 'rate' at 0x7fd1a794d530>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[1]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7fc7df6c94e0>
+DEBUG:root:death_uep=<Element 'death' at 0x7fd1a794d670>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6c96c0>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df6c9760>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a794d850>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fd1a794d8f0>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6ca070>
-DEBUG:root:<Element 'duration' at 0x7fc7df6ca110>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a794e200>
+DEBUG:root:<Element 'duration' at 0x7fd1a794e2a0>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7fc7df6ca1b0>
+DEBUG:root:<Element 'duration' at 0x7fd1a794e340>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[1]//phenotype//volume//
 DEBUG:root:
@@ -106,8 +106,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df6d4720>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df6d47c0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fd1a79588b0>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fd1a7958950>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -120,14 +120,14 @@ DEBUG:root:     chemotactic_sensitivity (dict)= {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[1]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df6d49a0>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fd1a7958b30>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df6d5120>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fd1a79592b0>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -142,7 +142,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df6d6430>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fd1a795a5c0>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -187,22 +187,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[2]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7fc7df6d7510>
+DEBUG:root:<Element 'rate' at 0x7fd1a795b6a0>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[2]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7fc7df6d7650>
+DEBUG:root:death_uep=<Element 'death' at 0x7fd1a795b7e0>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6d7830>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df6d78d0>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a795b9c0>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fd1a795ba60>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6e4040>
-DEBUG:root:<Element 'duration' at 0x7fc7df6e40e0>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a79681d0>
+DEBUG:root:<Element 'duration' at 0x7fd1a7968270>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7fc7df6e4180>
+DEBUG:root:<Element 'duration' at 0x7fd1a7968310>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[2]//phenotype//volume//
 DEBUG:root:
@@ -223,8 +223,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df6e6250>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df6e62a0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fd1a796a3e0>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fd1a796a430>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -234,14 +234,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[2]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df6e6480>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fd1a796a610>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[2]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df6e6ac0>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fd1a796ac50>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -256,7 +256,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df6e7c90>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fd1a796be20>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -301,22 +301,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[3]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7fc7df6f49a0>
+DEBUG:root:<Element 'rate' at 0x7fd1a7974b30>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[3]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7fc7df6f4ae0>
+DEBUG:root:death_uep=<Element 'death' at 0x7fd1a7974c70>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6f4cc0>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df6f4d60>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a7974e50>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fd1a7974ef0>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6f5490>
-DEBUG:root:<Element 'duration' at 0x7fc7df6f5530>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a7975620>
+DEBUG:root:<Element 'duration' at 0x7fd1a79756c0>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7fc7df6f55d0>
+DEBUG:root:<Element 'duration' at 0x7fd1a7975760>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[3]//phenotype//volume//
 DEBUG:root:
@@ -337,8 +337,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[3]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[3]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df6f76a0>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df6f76f0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fd1a7977830>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fd1a7977880>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -348,14 +348,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[3]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df6f78d0>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fd1a7977a60>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[3]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df6f7f10>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fd1a79840e0>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -370,7 +370,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df701120>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fd1a79852b0>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= cancer --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -415,22 +415,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[4]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7fc7df701df0>
+DEBUG:root:<Element 'rate' at 0x7fd1a7985f80>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[4]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7fc7df701f30>
+DEBUG:root:death_uep=<Element 'death' at 0x7fd1a79860c0>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df702110>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df7021b0>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a79862a0>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fd1a7986340>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df7028e0>
-DEBUG:root:<Element 'duration' at 0x7fc7df702980>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fd1a7986a70>
+DEBUG:root:<Element 'duration' at 0x7fd1a7986b10>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7fc7df702a20>
+DEBUG:root:<Element 'duration' at 0x7fd1a7986bb0>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[4]//phenotype//volume//
 DEBUG:root:
@@ -451,8 +451,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[4]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[4]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df70cb30>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df70cb80>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fd1a7990cc0>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fd1a7990d10>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -462,14 +462,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[4]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df70cd60>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fd1a7990ef0>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[4]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df70d3a0>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fd1a7991530>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -484,7 +484,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df70e570>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fd1a7992700>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= microglia --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -529,23 +529,23 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[5]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7fc7df70f240>
+DEBUG:root:<Element 'rate' at 0x7fd1a79933d0>
 DEBUG:root:--  cycle_live_trate00 0
 DEBUG:root: >> phase_durations_path =.//cell_definition[5]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7fc7df70f380>
+DEBUG:root:death_uep=<Element 'death' at 0x7fd1a7993510>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7fc7df70f560>
-DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fc7df70f600>
+DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7fd1a79936f0>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fd1a7993790>
 DEBUG:root:start_index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7fc7df70fd30>
-DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fc7df70fdd0>
+DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7fd1a7993ec0>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fd1a7993f60>
 DEBUG:root:start_index= 0
 DEBUG:root: --- transition rate 01 (float) = 9000000000.0
-DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fc7df70fe70>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fd1a79a0040>
 DEBUG:root:start_index= 1
 DEBUG:root: --- transition rate 12 (float) = 1.15741e-05
 DEBUG:root:volume_path=.//cell_definition[5]//phenotype//volume//
@@ -567,8 +567,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[5]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[5]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df71df80>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df71dfd0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fd1a79a2110>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fd1a79a2160>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -578,14 +578,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[5]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df71e1b0>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fd1a79a2340>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[5]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df71e7f0>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fd1a79a2980>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -600,7 +600,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df71f9c0>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fd1a79a3b50>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= astrocyte --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -762,102 +762,3 @@ DEBUG:matplotlib.font_manager:findfont: Matching sans\-serif:style=normal:varian
 DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['leader cell', 'follower cell', 'cancer', 'microglia', 'astrocyte']
 DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['leader cell', 'follower cell', 'cancer', 'microglia', 'astrocyte']
 DEBUG:root:studio.py: calling vis_tab.substrates_cbox_changed_cb(2)
-DEBUG:matplotlib.font_manager:findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=7.0.
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf', name='STIXGeneral', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf', name='STIXGeneral', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf', name='cmss10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf', name='cmr10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf', name='DejaVu Sans Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf', name='STIXSizeFiveSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf', name='STIXGeneral', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf', name='cmex10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf', name='DejaVu Serif Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf', name='STIXGeneral', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf', name='cmmi10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf', name='cmsy10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf', name='cmb10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-RI.ttf', name='Ubuntu Mono', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-BdIta.otf', name='C059', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Italic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-LightItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-Bold.otf', name='P052', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-DemiItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-DemiOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-BookOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-Regular.otf', name='Nimbus Roman', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-Demi.otf', name='URW Gothic', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/Z003-MediumItalic.otf', name='Z003', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-BI.ttf', name='Ubuntu Mono', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-BoldOblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=700, stretch='condensed', size='scalable')) = 11.535
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-BoldItalic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf', name='Ubuntu', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf', name='Ubuntu', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/D050000L.otf', name='D050000L', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Italic.otf', name='C059', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-L.ttf', name='Ubuntu', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Regular.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf', name='Droid Sans Fallback', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-Bold.otf', name='Nimbus Roman', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-B.ttf', name='Ubuntu Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-LI.ttf', name='Ubuntu', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-BI.ttf', name='Ubuntu', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-BoldItalic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-Light.otf', name='URW Bookman', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/StandardSymbolsPS.otf', name='Standard Symbols PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Oblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=400, stretch='condensed', size='scalable')) = 11.25
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-C.ttf', name='Ubuntu Condensed', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Italic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/UbuntuMono-R.ttf', name='Ubuntu Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf', name='Noto Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf', name='Nimbus Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-Th.ttf', name='Ubuntu', style='normal', variant='normal', weight=250, stretch='normal', size='scalable')) = 10.1925
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-BoldItalic.otf', name='P052', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf', name='Noto Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWBookman-Demi.otf', name='URW Bookman', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Roman.otf', name='C059', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-Roman.otf', name='P052', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-MI.ttf', name='Ubuntu', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Regular.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-RI.ttf', name='Ubuntu', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-BoldItalic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/ubuntu/Ubuntu-M.ttf', name='Ubuntu', style='normal', variant='normal', weight=500, stretch='normal', size='scalable')) = 10.145
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/URWGothic-Book.otf', name='URW Gothic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf', name='Noto Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/P052-Italic.otf', name='P052', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Bold.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusRoman-Italic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Bold.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf', name='Nimbus Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Bold.otf', name='C059', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
-DEBUG:matplotlib.font_manager:findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=7.0 to DejaVu Sans ('/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
