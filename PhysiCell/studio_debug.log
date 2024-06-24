@@ -11,17 +11,17 @@ DEBUG:root: --> oxygen
 DEBUG:root:=======================  microenv populate_tree  ======================= 
 DEBUG:root:dc_ic_units =  mmHg
 DEBUG:root:dc_bc_units = mmHg
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4bec674e00>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8900>
 DEBUG:root:   -------- oxygen:  dirichlet_xmin = 38
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4bec674ea0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4bec674f40>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4bec674fe0>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4bec675080>
-DEBUG:root:bv = <Element 'boundary_value' at 0x7f4bec675120>
-DEBUG:root:------- options: <Element 'calculate_gradients' at 0x7f4bec675210>
-DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x7f4bec6752b0>
-DEBUG:root:------- options: <Element 'initial_condition' at 0x7f4bec675300>
-DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x7f4bec675440>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c89a0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8a40>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8ae0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8b80>
+DEBUG:root:bv = <Element 'boundary_value' at 0x7fc7df6c8c20>
+DEBUG:root:------- options: <Element 'calculate_gradients' at 0x7fc7df6c8d10>
+DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x7fc7df6c8db0>
+DEBUG:root:------- options: <Element 'initial_condition' at 0x7fc7df6c8e00>
+DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x7fc7df6c8f40>
 DEBUG:root:
 
 =======================  leaving microenv populate_tree  =====================
@@ -70,22 +70,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[1]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4bec6758a0>
+DEBUG:root:<Element 'rate' at 0x7fc7df6c93a0>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[1]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4bec6759e0>
+DEBUG:root:death_uep=<Element 'death' at 0x7fc7df6c94e0>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec675bc0>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4bec675c60>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6c96c0>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df6c9760>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec676570>
-DEBUG:root:<Element 'duration' at 0x7f4bec676610>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6ca070>
+DEBUG:root:<Element 'duration' at 0x7fc7df6ca110>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4bec6766b0>
+DEBUG:root:<Element 'duration' at 0x7fc7df6ca1b0>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[1]//phenotype//volume//
 DEBUG:root:
@@ -106,8 +106,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4bec680c20>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4bec680cc0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df6d4720>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df6d47c0>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -120,14 +120,14 @@ DEBUG:root:     chemotactic_sensitivity (dict)= {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[1]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4bec680ea0>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df6d49a0>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4bec681620>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df6d5120>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -142,7 +142,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4bec682930>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df6d6430>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= leader cell --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -187,22 +187,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[2]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4bec683a10>
+DEBUG:root:<Element 'rate' at 0x7fc7df6d7510>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[2]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4bec683b50>
+DEBUG:root:death_uep=<Element 'death' at 0x7fc7df6d7650>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec683d30>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4bec683dd0>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6d7830>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df6d78d0>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec690540>
-DEBUG:root:<Element 'duration' at 0x7f4bec6905e0>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6e4040>
+DEBUG:root:<Element 'duration' at 0x7fc7df6e40e0>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4bec690680>
+DEBUG:root:<Element 'duration' at 0x7fc7df6e4180>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[2]//phenotype//volume//
 DEBUG:root:
@@ -223,8 +223,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[2]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4bec692750>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4bec6927a0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df6e6250>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df6e62a0>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -234,14 +234,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[2]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4bec692980>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df6e6480>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[2]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4bec692fc0>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df6e6ac0>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -256,7 +256,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4bec69c1d0>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df6e7c90>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= follower cell --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -301,22 +301,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[3]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4bec69cea0>
+DEBUG:root:<Element 'rate' at 0x7fc7df6f49a0>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[3]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4bec69cfe0>
+DEBUG:root:death_uep=<Element 'death' at 0x7fc7df6f4ae0>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec69d1c0>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4bec69d260>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6f4cc0>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df6f4d60>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec69d990>
-DEBUG:root:<Element 'duration' at 0x7f4bec69da30>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df6f5490>
+DEBUG:root:<Element 'duration' at 0x7fc7df6f5530>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4bec69dad0>
+DEBUG:root:<Element 'duration' at 0x7fc7df6f55d0>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[3]//phenotype//volume//
 DEBUG:root:
@@ -337,8 +337,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[3]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[3]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4bec69fba0>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4bec69fbf0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df6f76a0>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df6f76f0>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -348,14 +348,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[3]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4bec69fdd0>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df6f78d0>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[3]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4bec6ac450>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df6f7f10>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -370,7 +370,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4bec6ad620>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df701120>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= cancer --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -415,22 +415,22 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[4]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4bec6ae2f0>
+DEBUG:root:<Element 'rate' at 0x7fc7df701df0>
 DEBUG:root:--  cycle_live_trate00 0.0
 DEBUG:root: >> phase_durations_path =.//cell_definition[4]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4bec6ae430>
+DEBUG:root:death_uep=<Element 'death' at 0x7fc7df701f30>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec6ae610>
-DEBUG:root:phase_duration= <Element 'duration' at 0x7f4bec6ae6b0>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df702110>
+DEBUG:root:phase_duration= <Element 'duration' at 0x7fc7df7021b0>
 DEBUG:root:index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7f4bec6aede0>
-DEBUG:root:<Element 'duration' at 0x7f4bec6aee80>
+DEBUG:root: >> pd_uep =<Element 'phase_durations' at 0x7fc7df7028e0>
+DEBUG:root:<Element 'duration' at 0x7fc7df702980>
 DEBUG:root:index= 0
-DEBUG:root:<Element 'duration' at 0x7f4bec6aef20>
+DEBUG:root:<Element 'duration' at 0x7fc7df702a20>
 DEBUG:root:index= 1
 DEBUG:root:volume_path=.//cell_definition[4]//phenotype//volume//
 DEBUG:root:
@@ -451,8 +451,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[4]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[4]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4bec6b9030>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4bec6b9080>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df70cb30>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df70cb80>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -462,14 +462,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[4]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4bec6b9260>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df70cd60>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[4]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4bec6b98a0>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df70d3a0>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -484,7 +484,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4bec6baa70>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df70e570>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= microglia --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -529,23 +529,23 @@ DEBUG:root:
 DEBUG:root: >> cycle_path= .//cell_definition[5]//phenotype//cycle
 DEBUG:root:   cycle code= 5
 DEBUG:root: >> phase_transition_path 
-DEBUG:root:<Element 'rate' at 0x7f4bec6bb740>
+DEBUG:root:<Element 'rate' at 0x7fc7df70f240>
 DEBUG:root:--  cycle_live_trate00 0
 DEBUG:root: >> phase_durations_path =.//cell_definition[5]//phenotype//cycle//phase_durations
 DEBUG:root: >> pd_uep =None
 DEBUG:root:
 ===== populate_tree():  death
-DEBUG:root:death_uep=<Element 'death' at 0x7f4bec6bb880>
+DEBUG:root:death_uep=<Element 'death' at 0x7fc7df70f380>
 DEBUG:root:-------- parsing apoptosis!
-DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7f4bec6bba60>
-DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7f4bec6bbb00>
+DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7fc7df70f560>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fc7df70f600>
 DEBUG:root:start_index= 0
 DEBUG:root:-------- parsing necrosis!
-DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7f4bec6c8270>
-DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7f4bec6c8310>
+DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x7fc7df70fd30>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fc7df70fdd0>
 DEBUG:root:start_index= 0
 DEBUG:root: --- transition rate 01 (float) = 9000000000.0
-DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7f4bec6c83b0>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x7fc7df70fe70>
 DEBUG:root:start_index= 1
 DEBUG:root: --- transition rate 12 (float) = 1.15741e-05
 DEBUG:root:volume_path=.//cell_definition[5]//phenotype//volume//
@@ -567,8 +567,8 @@ DEBUG:root:
 DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[5]//phenotype//motility//options//advanced_chemotaxis//
 DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0'}
 DEBUG:root:sensitivity_path= .//cell_definition[5]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
-DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7f4bec6ca480>
-DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7f4bec6ca4d0>
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x7fc7df71df80>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x7fc7df71dfd0>
 DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
 DEBUG:root:{'oxygen': '0.0'}
 DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
@@ -578,14 +578,14 @@ DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0'}
 DEBUG:root:
 ===== populate_tree():  secretion
 DEBUG:root:secretion_path = .//cell_definition[5]//phenotype//secretion//
-DEBUG:root:uep_secretion = <Element 'secretion' at 0x7f4bec6ca6b0>
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x7fc7df71e1b0>
 DEBUG:root:0) -- secretion substrate = oxygen
 DEBUG:root:------ done parsing secretion:
 DEBUG:root:
 ===== populate_tree():  cell_interactions
 DEBUG:root:---- cell_interactions_path= .//cell_definition[5]//phenotype//cell_interactions
 DEBUG:root:---- found cell_interactions:
-DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7f4bec6cacf0>
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x7fc7df71e7f0>
 DEBUG:root: live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
 DEBUG:root: fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
@@ -600,7 +600,7 @@ DEBUG:root:
 DEBUG:root:------ done parsing intracellular:
 DEBUG:root:
 ===== populate_tree():  custom data
-DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7f4bec6cbec0>
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x7fc7df71f9c0>
 DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
 DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
 DEBUG:root:populate: cell_def_name= astrocyte --> custom_data: {'min_ECM_motility_density': ['0.0', False]}
@@ -861,309 +861,3 @@ DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/
 DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf', name='Nimbus Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
 DEBUG:matplotlib.font_manager:findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-Bold.otf', name='C059', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
 DEBUG:matplotlib.font_manager:findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=7.0 to DejaVu Sans ('/home/aymeric/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
-DEBUG:root:===========  run_model_cb():  ============
-DEBUG:root:run_tab.py:  doing: mkdir output
-DEBUG:root:----------- microenv_tab.py: fill_xml(): ----------
-DEBUG:root:microenv_tab.py: fill_xml(): num subtrates = 1
-DEBUG:root:substrates_in_tree =['oxygen']
-DEBUG:root:microrenv_tab.py: key in param_d.keys() = oxygen
-DEBUG:root:matched! oxygen
-DEBUG:root:microrenv_tab.py: key in param_d.keys() = gradients
-DEBUG:root:microrenv_tab.py: key in param_d.keys() = track_in_agents
-DEBUG:root:
-
------------ cell_def_tab.py: fill_xml(): ----------
-DEBUG:root:num cell defs = 5
-DEBUG:root:cdefs_in_tree =['leader cell', 'follower cell', 'cancer', 'microglia', 'astrocyte']
-DEBUG:root:
---- key in param_d.keys() = leader cell
-DEBUG:root:matched! leader cell
-DEBUG:root:--- cell_adhesion_affinity= {'leader cell': '1.0', 'follower cell': '1.0', 'cancer': '1.0', 'microglia': '1.0', 'astrocyte': '1.0'}
-DEBUG:root:leader cell  --> 1.0
-DEBUG:root:follower cell  --> 1.0
-DEBUG:root:cancer  --> 1.0
-DEBUG:root:microglia  --> 1.0
-DEBUG:root:astrocyte  --> 1.0
-DEBUG:root:
-
- ====================> fill_xml_motility(): oxygen = oxygen 
-
-
-DEBUG:root:fill_xml_motility(): {'oxygen': '0.0'}
-DEBUG:root:oxygen  --> 0.0
-DEBUG:root:self.substrate_list = ['oxygen']
-DEBUG:root:substrate = oxygen
-DEBUG:root:------------------- fill_xml_interactions():  cdef= leader cell
-DEBUG:root:--- live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0', '': '0.0'}
-DEBUG:root:  key in live_phagocytosis_rate= leader cell
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= follower cell
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= cancer
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= microglia
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= astrocyte
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= 
-DEBUG:root:--- attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0', '': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0', '': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:------------------- fill_xml_intracellular()
-DEBUG:root:------ ["intracellular"]: for leader cell
-DEBUG:root:None
-DEBUG:root:
-
-DEBUG:root:------ ["custom_data"]: for leader cell
-DEBUG:root:
---- key in param_d.keys() = follower cell
-DEBUG:root:matched! follower cell
-DEBUG:root:--- cell_adhesion_affinity= {'leader cell': '1.0', 'follower cell': '1.0', 'cancer': '1.0', 'microglia': '1.0', 'astrocyte': '1.0'}
-DEBUG:root:leader cell  --> 1.0
-DEBUG:root:follower cell  --> 1.0
-DEBUG:root:cancer  --> 1.0
-DEBUG:root:microglia  --> 1.0
-DEBUG:root:astrocyte  --> 1.0
-DEBUG:root:
-
- ====================> fill_xml_motility(): oxygen = oxygen 
-
-
-DEBUG:root:fill_xml_motility(): {'oxygen': '0.0'}
-DEBUG:root:oxygen  --> 0.0
-DEBUG:root:self.substrate_list = ['oxygen']
-DEBUG:root:substrate = oxygen
-DEBUG:root:------------------- fill_xml_interactions():  cdef= follower cell
-DEBUG:root:--- live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:  key in live_phagocytosis_rate= leader cell
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= follower cell
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= cancer
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= microglia
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= astrocyte
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:------------------- fill_xml_intracellular()
-DEBUG:root:------ ["intracellular"]: for follower cell
-DEBUG:root:None
-DEBUG:root:
-
-DEBUG:root:------ ["custom_data"]: for follower cell
-DEBUG:root:
---- key in param_d.keys() = cancer
-DEBUG:root:matched! cancer
-DEBUG:root:--- cell_adhesion_affinity= {'leader cell': '1.0', 'follower cell': '1.0', 'cancer': '1.0', 'microglia': '1.0', 'astrocyte': '1.0'}
-DEBUG:root:leader cell  --> 1.0
-DEBUG:root:follower cell  --> 1.0
-DEBUG:root:cancer  --> 1.0
-DEBUG:root:microglia  --> 1.0
-DEBUG:root:astrocyte  --> 1.0
-DEBUG:root:
-
- ====================> fill_xml_motility(): oxygen = oxygen 
-
-
-DEBUG:root:fill_xml_motility(): {'oxygen': '0.0'}
-DEBUG:root:oxygen  --> 0.0
-DEBUG:root:self.substrate_list = ['oxygen']
-DEBUG:root:substrate = oxygen
-DEBUG:root:------------------- fill_xml_interactions():  cdef= cancer
-DEBUG:root:--- live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:  key in live_phagocytosis_rate= leader cell
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= follower cell
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= cancer
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= microglia
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= astrocyte
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:------------------- fill_xml_intracellular()
-DEBUG:root:------ ["intracellular"]: for cancer
-DEBUG:root:None
-DEBUG:root:
-
-DEBUG:root:------ ["custom_data"]: for cancer
-DEBUG:root:
---- key in param_d.keys() = microglia
-DEBUG:root:matched! microglia
-DEBUG:root:--- cell_adhesion_affinity= {'leader cell': '1.0', 'follower cell': '1.0', 'cancer': '1.0', 'microglia': '1.0', 'astrocyte': '1.0'}
-DEBUG:root:leader cell  --> 1.0
-DEBUG:root:follower cell  --> 1.0
-DEBUG:root:cancer  --> 1.0
-DEBUG:root:microglia  --> 1.0
-DEBUG:root:astrocyte  --> 1.0
-DEBUG:root:
-
- ====================> fill_xml_motility(): oxygen = oxygen 
-
-
-DEBUG:root:fill_xml_motility(): {'oxygen': '0.0'}
-DEBUG:root:oxygen  --> 0.0
-DEBUG:root:self.substrate_list = ['oxygen']
-DEBUG:root:substrate = oxygen
-DEBUG:root:------------------- fill_xml_interactions():  cdef= microglia
-DEBUG:root:--- live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:  key in live_phagocytosis_rate= leader cell
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= follower cell
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= cancer
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= microglia
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= astrocyte
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:------------------- fill_xml_intracellular()
-DEBUG:root:------ ["intracellular"]: for microglia
-DEBUG:root:None
-DEBUG:root:
-
-DEBUG:root:------ ["custom_data"]: for microglia
-DEBUG:root:
---- key in param_d.keys() = astrocyte
-DEBUG:root:matched! astrocyte
-DEBUG:root:--- cell_adhesion_affinity= {'leader cell': '1.0', 'follower cell': '1.0', 'cancer': '1.0', 'microglia': '1.0', 'astrocyte': '1.0'}
-DEBUG:root:leader cell  --> 1.0
-DEBUG:root:follower cell  --> 1.0
-DEBUG:root:cancer  --> 1.0
-DEBUG:root:microglia  --> 1.0
-DEBUG:root:astrocyte  --> 1.0
-DEBUG:root:
-
- ====================> fill_xml_motility(): oxygen = oxygen 
-
-
-DEBUG:root:fill_xml_motility(): {'oxygen': '0.0'}
-DEBUG:root:oxygen  --> 0.0
-DEBUG:root:self.substrate_list = ['oxygen']
-DEBUG:root:substrate = oxygen
-DEBUG:root:------------------- fill_xml_interactions():  cdef= astrocyte
-DEBUG:root:--- live_phagocytosis_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:  key in live_phagocytosis_rate= leader cell
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= follower cell
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= cancer
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= microglia
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:  key in live_phagocytosis_rate= astrocyte
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- attack_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:--- fusion_rate= {'leader cell': '0.0', 'follower cell': '0.0', 'cancer': '0.0', 'microglia': '0.0', 'astrocyte': '0.0'}
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:leader cell  --> 0.0
-DEBUG:root:follower cell  --> 0.0
-DEBUG:root:cancer  --> 0.0
-DEBUG:root:microglia  --> 0.0
-DEBUG:root:astrocyte  --> 0.0
-DEBUG:root:------------------- fill_xml_intracellular()
-DEBUG:root:------ ["intracellular"]: for astrocyte
-DEBUG:root:None
-DEBUG:root:
-
-DEBUG:root:------ ["custom_data"]: for astrocyte
-DEBUG:root:----------- end cell_def_tab.py: fill_xml(): ----------
-DEBUG:root:
---------- user_params_tab.py:  fill_xml(): self.count = 100
-DEBUG:root:--------- found //user_parameters
-DEBUG:root:initial_anisotropy
-DEBUG:root:initial_ECM_density
-DEBUG:root:cell_setup
-DEBUG:root:chemotactic_substrate_decay_rate
-DEBUG:root:chemical_field_setup
-DEBUG:root:angle_of_chemical_field_gradient
-DEBUG:root:ECM_orientation_setup
-DEBUG:root:ECM_dx
-DEBUG:root:ECM_dy
-DEBUG:root:ECM_dz
-DEBUG:root:cell_motility_ECM_interaction_model_selector
-DEBUG:root:discrete_ECM_remodeling
-DEBUG:root:link_anisotropy_and_bias
-DEBUG:root:ecm_update_model
-DEBUG:root:normalize_ECM_influenced_motility_vector
-DEBUG:root:duration_of_uE_conditioning
-DEBUG:root:freeze_uE_profile
-DEBUG:root:unit_test_setup
-DEBUG:root:march_unit_test_setup
-DEBUG:root:visual_guideline_pattern
-DEBUG:root:enable_ecm_outputs
-DEBUG:root:found 21

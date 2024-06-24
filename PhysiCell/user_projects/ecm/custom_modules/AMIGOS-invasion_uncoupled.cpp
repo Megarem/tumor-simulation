@@ -120,9 +120,7 @@ void create_cell_types( void )
 	
     Cell_Definition* leader_cell = find_cell_definition("leader cell");	
 	Cell_Definition* follower_cell = find_cell_definition("follower cell");	
-	Cell_Definition* cancer_cell = find_cell_definition("cancer");	
 
-	
 
 	leader_cell->functions.update_velocity = custom_update_cell_velocity;
 
@@ -160,9 +158,7 @@ void create_cell_types( void )
 
 	follower_cell->functions.update_velocity = custom_update_cell_velocity;
 
-	cancer_cell->functions.update_velocity = standard_update_cell_velocity;
 
-	cancer_cell->functions.custom_cell_rule = NULL; 
 // <cell_motility_ECM_interaction_model_selector type="string" units="" description="follower chemotaxis/no follower hysteresis, follower hysteresis/no follower chemotaxis">follower chemotaxis/no follower hysteresis<
 
     // rwh: doing this one:

@@ -10,10 +10,10 @@
     </cell_rules>
 
     <domain>
-        <x_min>-8170</x_min>
-        <x_max>8170</x_max>
-        <y_min>-8170</y_min>
-        <y_max>8170</y_max>
+        <x_min>-400</x_min>
+        <x_max>400</x_max>
+        <y_min>-400</y_min>
+        <y_max>400</y_max>
         <z_min>-10</z_min>
         <z_max>10</z_max>
         <dx>20</dx>
@@ -23,7 +23,7 @@
     </domain>
 
     <overall>
-        <max_time units="min">2880.0</max_time>
+        <max_time units="min">500</max_time>
         <time_units>min</time_units>
         <space_units>micron</space_units>
         <dt_diffusion units="min">0.01</dt_diffusion>
@@ -32,7 +32,7 @@
     </overall>
 
     <parallel>
-        <omp_num_threads>12</omp_num_threads>
+        <omp_num_threads>6</omp_num_threads>
     </parallel>
 
     <save>
@@ -292,8 +292,8 @@
                     <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
                 </volume>
                 <mechanics>
-                    <cell_cell_adhesion_strength units="micron/min">0.4</cell_cell_adhesion_strength>
-                    <cell_cell_repulsion_strength units="micron/min">10</cell_cell_repulsion_strength>
+                    <cell_cell_adhesion_strength units="micron/min">10</cell_cell_adhesion_strength>
+                    <cell_cell_repulsion_strength units="micron/min">90</cell_cell_repulsion_strength>
                     <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
                     <cell_adhesion_affinities>
                         <cell_adhesion_affinity name="leader cell">1.0</cell_adhesion_affinity>
