@@ -1,7 +1,10 @@
-cancer,pressure,decreases,cycle entry,0.0,1,4,0
-cancer,oxygen,increases,cycle entry,0.002,21.5,4,0
-cancer,oxygen,decreases,necrosis,0,3.75,8,0
-cancer,oxygen,decreases,migration speed,0,7.5,4,0
-cancer,oxygen,increases,cell-cell adhesion,0.4,7.5,4,0
-follower cell,oxygen,increases,cycle entry,0.002,19,4,0
+follower cell,oxygen,increases,cycle entry,0.0007,21.5,4,0
 follower cell,pressure,decreases,cycle entry,0,1,4,0
+follower cell,dead,increases,debris secretion,1,0.5,10,1
+follower cell,oxygen,decreases,necrosis,0,3.75,8,0
+follower cell,oxygen,decreases,migration speed,0,7.5,4,0
+follower cell,oxygen,increases,cell-cell adhesion,0.4,7.5,4,0
+microglia,pressure,decreases,cycle entry,0.0,1,4,0
+astrocyte,pressure,decreases,cycle entry,0.0,1,4,0
+astrocyte,oxygen,increases,cycle entry,0.0007,1,4,0
+microglia,oxygen,increases,cycle entry,0.0007,1,4,0

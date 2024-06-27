@@ -1,3 +1,10 @@
 PhysiCell/leader_follower/
 PhysiCell/temp/
 PhysiCell/output/
+env
+NN
+.vscode
+PhysiCell/sbi-logs/
+*.pkl
+*.png
+sbi-logs/
