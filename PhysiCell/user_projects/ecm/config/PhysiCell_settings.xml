@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <PhysiCell_settings version="devel-version">
 
     <cell_rules>
@@ -38,11 +39,11 @@
     <save>
         <folder>output</folder>
         <full_data>
-            <interval units="min">1440</interval>
+            <interval units="min">60</interval>
             <enable>true</enable>
         </full_data>
         <SVG>
-            <interval units="min">1440</interval>
+            <interval units="min">60</interval>
             <enable>true</enable>
             <plot_substrate enabled="false" limits="false">
                 <substrate>oxygen</substrate>
@@ -175,9 +176,9 @@
                     <detachment_rate units="1/min">0.0</detachment_rate>
                 </mechanics>
                 <motility>
-                    <speed units="micron/min">0.20503756403923035</speed>
-                    <persistence_time units="min">7.692394256591797</persistence_time>
-                    <migration_bias units="dimensionless">0.7499843835830688</migration_bias>
+                    <speed units="micron/min">0.42574575543403625</speed>
+                    <persistence_time units="min">10.0</persistence_time>
+                    <migration_bias units="dimensionless">0.949999988079071</migration_bias>
                     <options>
                         <enabled>true</enabled>
                         <use_2D>true</use_2D>
@@ -310,9 +311,9 @@
                     <relative_rupture_volume units="dimensionless">2.0</relative_rupture_volume>
                 </volume>
                 <mechanics>
-                    <cell_cell_adhesion_strength units="micron/min">0.04</cell_cell_adhesion_strength>
-                    <cell_cell_repulsion_strength units="micron/min">10</cell_cell_repulsion_strength>
-                    <relative_maximum_adhesion_distance units="dimensionless">1.25</relative_maximum_adhesion_distance>
+                    <cell_cell_adhesion_strength units="micron/min">4.459226608276367</cell_cell_adhesion_strength>
+                    <cell_cell_repulsion_strength units="micron/min">7.020759582519531</cell_cell_repulsion_strength>
+                    <relative_maximum_adhesion_distance units="dimensionless">1.3259369134902954</relative_maximum_adhesion_distance>
                     <cell_adhesion_affinities>
                         <cell_adhesion_affinity name="leader cell">1.0</cell_adhesion_affinity>
                         <cell_adhesion_affinity name="follower cell">1.0</cell_adhesion_affinity>
@@ -328,9 +329,9 @@
                     <detachment_rate units="1/min">0.0</detachment_rate>
                 </mechanics>
                 <motility>
-                    <speed units="micron/min">.5</speed>
-                    <persistence_time units="min">10</persistence_time>
-                    <migration_bias units="dimensionless">0.05</migration_bias>
+                    <speed units="micron/min">0.1278863102197647</speed>
+                    <persistence_time units="min">10.0</persistence_time>
+                    <migration_bias units="dimensionless">0.949999988079071</migration_bias>
                     <options>
                         <enabled>true</enabled>
                         <use_2D>true</use_2D>
