@@ -316,6 +316,7 @@ list-user-projects:
 run:
 	make clean
 	make data-cleanup
+	make reset
 	make load PROJ=$(PROJ)
 	make
 	python3 studio/bin/studio.py -e project -c config/PhysiCell_settings.xml

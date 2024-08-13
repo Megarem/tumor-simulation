@@ -1,0 +1,288 @@
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <ctime>
+#include <cmath>
+#include <omp.h>
+#include <fstream>
+
+#include "./core/PhysiCell.h"
+#include "./modules/PhysiCell_standard_modules.h" 
+
+// custom user modules 
+
+#include "./custom_modules/AMIGOS-invasion_uncoupled.h" 
+#include "./custom_modules/cell_ECM_interactions.h" 
+// #include "./custom_modules/ECM.h"
+	
+using namespace BioFVM;
+using namespace PhysiCell;
+
+
+// set number of threads for OpenMP (parallel computing)
+
+// void ecm_update(void); // I think this from an old implentation. Noted and commented out 09.01.20
+
+void dump_leader_cell_info()
+{
+    std::cout << "---- t= " << PhysiCell_globals.current_time  << std::endl;
+    std::cout << "ID type adh rep     motility_vec     mig_bias      mig_bias_dir    \n";
+    for( int i=0; i < all_cells->size() ; i++ )
+    {
+        std::cout << (*all_cells)[i]->ID << " : " << (*all_cells)[i]->type << " : " <<
+            (*all_cells)[i]->phenotype.mechanics.cell_cell_adhesion_strength  << ", " <<
+            (*all_cells)[i]->phenotype.mechanics.cell_cell_repulsion_strength  << ", " <<
+            "(" << (*all_cells)[i]->phenotype.motility.motility_vector[0]  << ", " 
+            << (*all_cells)[i]->phenotype.motility.motility_vector[1]  << ", " 
+            << (*all_cells)[i]->phenotype.motility.motility_vector[2]  << "), " <<
+            (*all_cells)[i]->phenotype.motility.migration_bias  << ", " <<
+            "(" << (*all_cells)[i]->phenotype.motility.migration_bias_direction[0]  << ", "
+            << (*all_cells)[i]->phenotype.motility.migration_bias_direction[1]  << ") " <<std::endl;
+        std::cout<<"rmad= "<< (*all_cells)[i]->phenotype.mechanics.relative_maximum_adhesion_distance <<std::endl; 
+
+        std::cout<<"speed="<< (*all_cells)[i]->phenotype.motility.migration_speed << std::endl;
+        std::cout<<"pos=("<< (*all_cells)[i]->position[0] <<", "<< (*all_cells)[i]->position[1] <<")\n";
+        std::cout<<"vel=("<< (*all_cells)[i]->velocity[0] <<", "<< (*all_cells)[i]->velocity[1] <<")\n";
+    }
+}
+void dump_cell_info()
+{
+    std::cout << "---- t= " << PhysiCell_globals.current_time  << std::endl;
+    std::cout << "ID type adh rep     motility_vec     mig_bias      mig_bias_dir    \n";
+    for( int i=0; i < all_cells->size() ; i++ )
+    {
+        std::cout << (*all_cells)[i]->ID << " : " << (*all_cells)[i]->type << " : " <<
+            (*all_cells)[i]->phenotype.mechanics.cell_cell_adhesion_strength  << ", " <<
+            (*all_cells)[i]->phenotype.mechanics.cell_cell_repulsion_strength  << ", " <<
+            "(" << (*all_cells)[i]->phenotype.motility.motility_vector[0]  << ", " 
+            << (*all_cells)[i]->phenotype.motility.motility_vector[1]  << ", " 
+            << (*all_cells)[i]->phenotype.motility.motility_vector[2]  << "), " <<
+            (*all_cells)[i]->phenotype.motility.migration_bias  << ", " <<
+            "(" << (*all_cells)[i]->phenotype.motility.migration_bias_direction[0]  << ", "
+            << (*all_cells)[i]->phenotype.motility.migration_bias_direction[1]  << ") " <<std::endl;
+        std::cout<<"rmad= "<< (*all_cells)[i]->phenotype.mechanics.relative_maximum_adhesion_distance <<std::endl; 
+
+        std::cout<<"speed="<< (*all_cells)[i]->phenotype.motility.migration_speed << std::endl;
+        std::cout<<"pos=("<< (*all_cells)[i]->position[0] <<", "<< (*all_cells)[i]->position[1] <<")\n";
+        std::cout<<"vel=("<< (*all_cells)[i]->velocity[0] <<", "<< (*all_cells)[i]->velocity[1] <<")\n";
+    }
+}
+
+
+int main( int argc, char* argv[] )
+{
+
+	// load and parse settings file(s)
+ 
+	bool XML_status = false; 
+	char copy_command [1024]; 
+	if( argc > 1 )
+	{
+		XML_status = load_PhysiCell_config_file( argv[1] ); 
+		sprintf( copy_command , "cp %s %s" , argv[1] , PhysiCell_settings.folder.c_str() ); 
+	}
+	else
+	{ XML_status = load_PhysiCell_config_file( "./config/PhysiCell_settings.xml" ); }
+	if( !XML_status )
+	{ exit(-1); }
+
+	// OpenMP setup
+	omp_set_num_threads(PhysiCell_settings.omp_num_threads);
+	
+	// PNRG setup 
+	SeedRandom(0);  //rwh do here, just once
+	// if( parameters.ints("unit_test_setup") == 1) 
+	// {SeedRandom(0);}
+
+	
+	// time setup 
+	std::string time_units = "min"; 
+	
+	double t_max = PhysiCell_settings.max_time;  // 1 days
+
+	std::cout<<"test"<<std::endl;
+
+	/* Microenvironment setup */ 
+	setup_microenvironment();
+	setup_extracellular_matrix(); // NEW LINE!!!!
+
+	/* PhysiCell setup */ 
+ 	
+	// set mechanics voxel size, and match the data structure to BioFVM
+	double mechanics_voxel_size = 30; 
+	Cell_Container* cell_container = create_cell_container_for_microenvironment( microenvironment, mechanics_voxel_size );
+	
+	create_cell_types();
+	setup_tissue();
+	// ECM_setup(microenvironment.number_of_voxels());
+ 
+	/* Users typically start modifying here. START USERMODS */ 
+	
+	/* Users typically stop modifying here. END USERMODS */ 
+	
+	// set MultiCellDS save options 
+
+	set_save_biofvm_mesh_as_matlab( true ); 
+	set_save_biofvm_data_as_matlab( true ); 
+	set_save_biofvm_cell_data( true ); 
+	set_save_biofvm_cell_data_as_custom_matlab( true );
+	
+	// save a simulation snapshot 
+	
+	char filename[1024];
+	sprintf( filename , "%s/initial" , PhysiCell_settings.folder.c_str() ); 
+	save_PhysiCell_to_MultiCellDS_v2( filename , microenvironment , PhysiCell_globals.current_time ); 
+	
+	// save a quick SVG cross section through z = 0, after setting its 
+	// length bar to 200 microns 
+
+	PhysiCell_SVG_options.length_bar = 200; 
+
+	// for simplicity, set a pathology coloring function 
+	
+	std::vector<std::string> (*cell_coloring_function)(Cell*) = AMIGOS_invasion_coloring_function;
+	
+	sprintf( filename , "%s/initial.svg" , PhysiCell_settings.folder.c_str() ); 
+	SVG_plot_custom( filename , microenvironment, 0.0 , PhysiCell_globals.current_time, cell_coloring_function, parameters.strings("visual_guideline_pattern") );
+	
+	display_citations(); 
+	
+	run_biotransport( parameters.doubles("duration_of_uE_conditioning") ); 
+
+	if(parameters.bools("freeze_uE_profile")==true)
+	{
+		alter_cell_uptake_secretion_saturation();
+	}
+
+	// if(parameters.ints("unit_test_setup")==1 || parameters.ints("discrete_ECM_remodeling") == 1)
+	// {
+	set_cell_motility_vectors(); // Required for instant writing and unit test. To make all simulations have similar initial conditions, requiring it for all simulations at this time 05.27.22
+	// }
+	// set the performance timers 
+
+	BioFVM::RUNTIME_TIC();
+	BioFVM::TIC();
+	
+	std::ofstream report_file;
+
+	//variables for March Project
+	double reset_Cells_interval = 1960.0; // for a 1000 by 1000 um computational domain (use 980.0 for speed = 1.0. Doulbe it for speed equals 0.5. )
+	bool enable_cell_resets = true;
+
+	// main loop 
+	if( PhysiCell_settings.enable_legacy_saves == true )
+	{	
+		sprintf( filename , "%s/simulation_report.txt" , PhysiCell_settings.folder.c_str() ); 
+		
+		report_file.open(filename); 	// create the data log file 
+		report_file<<"simulated time\tnum cells\tnum division\tnum death\twall time"<<std::endl;
+	}
+	
+	try 
+	{	
+		while( PhysiCell_globals.current_time < t_max + 0.1*diffusion_dt )
+		{
+			// save data if it's time. 
+            if(  fabs( PhysiCell_globals.current_time - PhysiCell_globals.next_full_save_time ) < 0.01 * diffusion_dt )
+            {
+				
+				display_simulation_status( std::cout ); 
+				if( PhysiCell_settings.enable_legacy_saves == true )
+				{	
+					log_output( PhysiCell_globals.current_time , PhysiCell_globals.full_output_index, microenvironment, report_file);
+				}
+				
+				if( PhysiCell_settings.enable_full_saves == true )
+				{	
+					sprintf( filename , "%s/output%08u" , PhysiCell_settings.folder.c_str(),  PhysiCell_globals.full_output_index ); 
+					
+					save_PhysiCell_to_MultiCellDS_v2( filename , microenvironment , PhysiCell_globals.current_time ); 
+				}
+				if( parameters.bools("enable_ecm_outputs") == true)
+				{
+					sprintf( filename , "%s/output%08u_ECM.mat" , PhysiCell_settings.folder.c_str(), PhysiCell_globals.full_output_index);
+					write_ECM_Data_matlab( filename );
+				}
+				PhysiCell_globals.full_output_index++; 
+				PhysiCell_globals.next_full_save_time += PhysiCell_settings.full_save_interval;
+			}
+			
+			// save SVG plot if it's time
+			if( fabs( PhysiCell_globals.current_time - PhysiCell_globals.next_SVG_save_time  ) < 0.01 * diffusion_dt )
+			{
+				if( PhysiCell_settings.enable_SVG_saves == true )
+				{	
+					sprintf( filename , "%s/snapshot%08u.svg" , PhysiCell_settings.folder.c_str() , PhysiCell_globals.SVG_output_index ); 
+					SVG_plot_custom( filename , microenvironment, 0.0 , PhysiCell_globals.current_time, cell_coloring_function, parameters.strings("visual_guideline_pattern"));
+					
+					PhysiCell_globals.SVG_output_index++; 
+					PhysiCell_globals.next_SVG_save_time  += PhysiCell_settings.SVG_save_interval;
+
+                    // dump_cell_info();  //rwh
+                    // dump_leader_cell_info();  //rwh
+				}
+			}
+
+			// Uncomment to run march test
+ 			if( fabs( PhysiCell_globals.current_time - reset_Cells_interval  ) <  0.1 * diffusion_dt && parameters.ints("unit_test_setup") == 0 && parameters.ints("march_unit_test_setup") == 1)	
+			{
+				if (enable_cell_resets == true )
+				{
+					reset_cell_position();
+					reset_Cells_interval += 1960.0; // for a 1000 by 1000 um computational domain (use 980.0 for speed = 1.0. Doulbe it for speed equals 0.5. )
+				}
+				
+			}
+		
+			// update the microenvironment
+
+			// if(parameters.bools("freeze_uE_profile")==true)
+
+			if( parameters.ints("unit_test_setup") == 0 && parameters.bools("freeze_uE_profile")==0 ) // Is there a way to set this only once??
+			{
+				microenvironment.simulate_diffusion_decay( diffusion_dt );
+			}
+
+			// copy_ECM_data_to_BioFVM();
+			
+			// run PhysiCell 
+			((Cell_Container *)microenvironment.agent_container)->update_all_cells( PhysiCell_globals.current_time );
+			
+			//add ECM update here!
+            
+            // This changes the cell speed and bias as based on the ECM. It is the funciton that makes teh cells "see" the ECM and react to it with changes in their dynamics.
+            // In this current LS18 implementation, that means that only follower cells will see the ECM.
+            
+            // May need something that specifics that only followers do this (fixed with test on cell type). Could perhaps put that into the custom stuff. Would need something similar for the ECM realignment. Would like to move this out of diffusion loop so we can specify how frequently it updates.
+            
+            // cell_update_from_ecm();
+            
+			PhysiCell_globals.current_time += diffusion_dt;
+			
+			if( PhysiCell_settings.enable_legacy_saves == true )
+			{			
+			log_output(PhysiCell_globals.current_time, PhysiCell_globals.full_output_index, microenvironment, report_file);
+			report_file.close();
+			}
+		}
+	}
+	catch( const std::exception& e )
+	{ // reference to the base of a polymorphic object
+		std::cout << e.what(); // information from length_error printed
+	}
+	
+	// save a final simulation snapshot 
+	
+	sprintf( filename , "%s/final" , PhysiCell_settings.folder.c_str() ); 
+	save_PhysiCell_to_MultiCellDS_v2( filename , microenvironment , PhysiCell_globals.current_time ); 
+	
+	sprintf( filename , "%s/final.svg" , PhysiCell_settings.folder.c_str() ); 
+	SVG_plot_custom( filename , microenvironment, 0.0 , PhysiCell_globals.current_time, cell_coloring_function, parameters.strings("visual_guideline_pattern") );
+	
+	// timer 
+	
+	std::cout << std::endl << "Total simulation runtime: " << std::endl; 
+	BioFVM::display_stopwatch_value( std::cout , BioFVM::runtime_stopwatch_value() ); 
+
+	return 0; 
+}

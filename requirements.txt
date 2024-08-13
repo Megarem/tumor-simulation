@@ -1,4 +1,5 @@
 absl-py==2.1.0
+appdirs==1.4.4
 arviz==0.18.0
 asttokens==2.4.1
 comm==0.2.2
@@ -10,6 +11,8 @@ dm-tree==0.1.8
 exceptiongroup==1.2.1
 executing==2.0.1
 filelock==3.15.4
+flexcache==0.3
+flexparser==0.3.1
 fonttools==4.53.0
 fsspec==2024.6.0
 grpcio==1.64.1
@@ -50,6 +53,7 @@ pandas==2.2.2
 parso==0.8.4
 pexpect==4.9.0
 pillow==10.3.0
+Pint==0.24.3
 platformdirs==4.2.2
 prompt_toolkit==3.0.47
 protobuf==4.25.3
@@ -71,6 +75,7 @@ sbi==0.22.0
 scikit-learn==1.5.0
 scipy==1.13.1
 seaborn==0.13.2
+simulariumio==1.11.0
 six==1.16.0
 stack-data==0.6.3
 sympy==1.12.1

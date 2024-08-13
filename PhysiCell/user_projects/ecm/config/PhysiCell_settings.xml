@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <PhysiCell_settings version="devel-version">
 
     <cell_rules>
@@ -11,10 +10,10 @@
     </cell_rules>
 
     <domain>
-        <x_min>-400</x_min>
-        <x_max>400</x_max>
-        <y_min>-400</y_min>
-        <y_max>400</y_max>
+        <x_min>-300</x_min>
+        <x_max>300</x_max>
+        <y_min>-300</y_min>
+        <y_max>300</y_max>
         <z_min>-10</z_min>
         <z_max>10</z_max>
         <dx>20</dx>
@@ -265,7 +264,7 @@
             <phenotype>
                 <cycle code="5" name="live">
                     <phase_transition_rates units="1/min">
-                        <rate start_index="0" end_index="0" fixed_duration="false">0.0</rate>
+                        <rate start_index="0" end_index="0" fixed_duration="false">0.02</rate>
                     </phase_transition_rates>
                 </cycle>
                 <death>
